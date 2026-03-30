@@ -1,0 +1,83 @@
+{
+  "kind": "report",
+  "slug": "uk-meta-tiktok-gap",
+  "title": "UK Shopify brands still underuse TikTok after proving Meta demand",
+  "summary": "A public research note on how often uk Shopify brands appear active on Meta before showing any visible TikTok setup.",
+  "contextLine": "Updated from EnrichAnything market scans · live snapshot from March 23, 2026",
+  "marketSlug": "shopify-uk-meta-no-tiktok",
+  "marketUrl": "https://www.enrichanything.com/markets/shopify-uk-meta-no-tiktok",
+  "siteUrl": "https://www.enrichanything.com/reports/uk-meta-tiktok-gap",
+  "status": "live",
+  "live": true,
+  "dataSource": "collected_sample",
+  "dataNote": "Built from the latest published EnrichAnything market scan.",
+  "rowCount": 22,
+  "lastSuccessAt": "2026-03-23T17:05:16.253+00:00",
+  "lastSuccessLabel": "March 23, 2026",
+  "lastStatus": "paused",
+  "citationText": "Based on EnrichAnything's latest scan of matching brands, 100% already include an explicit gap signal and 100% include a timing note.",
+  "stats": [
+    {
+      "value": "100%",
+      "label": "rows with explicit gap signal",
+      "detail": "",
+      "note": "Useful for turning the list into a clear angle"
+    },
+    {
+      "value": "100%",
+      "label": "rows with timing signal",
+      "detail": "",
+      "note": "Rows that already explain why the window matters now"
+    }
+  ],
+  "chartRows": [
+    {
+      "value": "100",
+      "label": "Rows with signal evidence",
+      "detail": "",
+      "note": "How many rows already carry an explicit signal note"
+    },
+    {
+      "value": "100",
+      "label": "Rows with gap note",
+      "detail": "",
+      "note": "How many rows already expose the missing-tool or missing-motion angle"
+    },
+    {
+      "value": "100",
+      "label": "Rows with why-now note",
+      "detail": "",
+      "note": "How many rows already explain timing in the live sample"
+    }
+  ],
+  "sampleRows": [
+    {
+      "company": "Marks and Spencer",
+      "location": "UK",
+      "signal": "Top Meta advertiser in UK with 940 ads, 2.2B views, $33.1M spend indicating active ecommerce advertising on Meta",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+    },
+    {
+      "company": "ASOS",
+      "location": "UK",
+      "signal": "Top Meta advertiser in UK with 490 ads, 853.5M views, $12.8M spend",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+    },
+    {
+      "company": "Gymshark",
+      "location": "UK",
+      "signal": "Top Meta advertiser in UK with 287 ads, 257.8M views, $3.9M spend; active ad library with high impressions",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+    },
+    {
+      "company": "Nutrition Geeks",
+      "location": "UK",
+      "signal": "Top Meta advertiser in UK with 782 ads, 1.2B views, $17.9M spend",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+    }
+  ]
+}

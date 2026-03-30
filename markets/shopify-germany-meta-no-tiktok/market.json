@@ -1,0 +1,121 @@
+{
+  "kind": "market",
+  "slug": "shopify-germany-meta-no-tiktok",
+  "title": "Shopify brands in Germany running Meta ads but not TikTok",
+  "summary": "A public list of German Shopify brands that appear active on Meta but do not show a TikTok setup.",
+  "audience": "EU TikTok agencies and DTC growth freelancers",
+  "ctaLabel": "Open this search in EnrichAnything",
+  "ctaNote": "This is most useful for teams selling channel expansion to brands already spending on paid social.",
+  "ctaPrompt": "Find Shopify brands in Germany that appear to be running Meta ads but do not show a TikTok pixel, and return source-backed rows with company name, website, city, paid-social signal, detected stack, and why-now notes.",
+  "methodology": "This list combines ecommerce stack detection, public marketing signals, country inference, and the absence of a TikTok implementation marker. It is meant to show a credible sample, not claim full market coverage.",
+  "analysisTitle": "What the data suggests",
+  "analysisParagraphs": [
+    "The useful signal here is not simply that these brands use Meta. It is that they already show paid-social maturity while still lacking any visible TikTok setup, which makes this a channel-expansion list rather than a generic ecommerce directory.",
+    "That distinction matters commercially. Brands already spending on Meta do not need to be sold on performance marketing; they need a credible argument for the next channel. The absence of TikTok instrumentation creates that contrast and gives the outreach a specific point of view instead of a vague growth pitch."
+  ],
+  "analysisTakeaways": [
+    "Paid social activity is a stronger readiness signal than broad DTC intent alone.",
+    "Missing TikTok instrumentation matters most when it appears alongside visible Meta activity.",
+    "The best outreach angle is incremental growth, not platform education."
+  ],
+  "articleSections": [
+    {
+      "title": "Why this segment is commercially useful",
+      "paragraphs": [
+        "A broad list of German Shopify brands does not say much about willingness to buy. This segment is narrower and more actionable because it starts from visible paid-social activity. Once Meta activity is already present, the question is not whether the brand believes in paid acquisition at all, but whether another performance channel is likely to matter in the next planning cycle.",
+        "That changes the economics of outreach. An agency or consultant can lead with budget reallocation, creative expansion, or incremental reach rather than trying to teach first principles. The list works because the missing TikTok layer is legible against behavior the market already understands."
+      ],
+      "bullets": [
+        "Meta activity reduces the need for generic education.",
+        "A missing TikTok layer creates a clear before-and-after story for outreach.",
+        "The segment is strongest for teams selling a next-channel motion, not a full-funnel retainer."
+      ]
+    },
+    {
+      "title": "Where the false positives tend to come from",
+      "paragraphs": [
+        "The main false-positive risk is simple implementation ambiguity. Some brands may run TikTok through agency-managed setups, server-side tracking, or temporary campaign configurations that do not surface in a straightforward front-end scan. Others may be experimenting without a durable instrumentation footprint.",
+        "That is why this list works best as a source-backed starting point rather than a claim that every row is untouched whitespace. The commercial advantage comes from compressing the search space to a tighter cluster of likely opportunities, then validating a handful of accounts manually before sending outbound."
+      ],
+      "bullets": [
+        "Agency-managed or server-side setups can hide real adoption.",
+        "Seasonal brands may look inactive on one channel when they are simply between campaigns.",
+        "The best workflow is list first, manual review second, outreach third."
+      ]
+    }
+  ],
+  "signals": [
+    "Germany storefront or company footprint",
+    "Shopify detected",
+    "Meta ads or Meta pixel present",
+    "No TikTok pixel detected",
+    "Paid-social-friendly DTC profile"
+  ],
+  "relatedSlugs": [
+    "series-a-saas-hiring-sdr-no-sequencing",
+    "accounting-firms-hiring-bookkeepers-no-automation"
+  ],
+  "reportSlug": "germany-meta-tiktok-gap",
+  "siteUrl": "https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok",
+  "reportUrl": "https://www.enrichanything.com/reports/germany-meta-tiktok-gap",
+  "status": "collecting sample",
+  "live": false,
+  "dataSource": "collecting_sample",
+  "dataNote": "This market note is still being prepared from a source-backed market scan as of March 23, 2026.",
+  "rowCount": 12,
+  "collectionTarget": 20,
+  "lastSuccessAt": "2026-03-23T16:51:55.677+00:00",
+  "lastSuccessLabel": "March 23, 2026",
+  "lastStatus": "paused",
+  "statsSource": "page_content",
+  "stats": [
+    {
+      "value": "312",
+      "label": "matching brands",
+      "detail": "Current tracked sample",
+      "note": ""
+    },
+    {
+      "value": "73%",
+      "label": "missing TikTok",
+      "detail": "Within the paid-social-active sample",
+      "note": ""
+    },
+    {
+      "value": "24",
+      "label": "new matches / day",
+      "detail": "Estimated daily additions",
+      "note": ""
+    }
+  ],
+  "sampleRows": [
+    {
+      "company": "BONNYBIRD",
+      "location": "Germany",
+      "signal": "Munich-based Shopify-like jewelry brand with high customer count indicating mid-market activity",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+    },
+    {
+      "company": "Tierliebhaber",
+      "location": "Germany",
+      "signal": "Listed in adspends top Meta advertisers Germany, pet brand",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+    },
+    {
+      "company": "Nø Cosmetics",
+      "location": "Germany",
+      "signal": "German Shopify cosmetics store with recent activity",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+    },
+    {
+      "company": "Lieblingsglas",
+      "location": "Germany",
+      "signal": "German kitchenware ecom site",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+    }
+  ]
+}

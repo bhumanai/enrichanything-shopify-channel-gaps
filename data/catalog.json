@@ -1,0 +1,1167 @@
+{
+  "generatedAt": "2026-03-30T11:26:31.907Z",
+  "title": "Shopify Brands Missing TikTok or SMS",
+  "summary": "Lists of Shopify brands already spending on Meta or email, but still missing the next obvious channel.",
+  "topics": [
+    "shopify",
+    "ecommerce",
+    "lead-generation",
+    "market-intelligence",
+    "growth-marketing",
+    "tiktok-ads",
+    "email-marketing"
+  ],
+  "markets": [
+    {
+      "kind": "market",
+      "slug": "shopify-france-meta-no-tiktok",
+      "title": "Shopify brands in France running Meta ads but not TikTok",
+      "summary": "A public list of French Shopify brands that appear active on Meta but do not show a TikTok setup.",
+      "audience": "EU TikTok agencies and DTC growth freelancers",
+      "ctaLabel": "Open this search in EnrichAnything",
+      "ctaNote": "This is most useful for teams selling channel expansion to brands that already appear comfortable with paid social.",
+      "ctaPrompt": "Build a broad, source-backed collection from Meta Ad Library advertisers and public storefront checks to find Shopify brands in France that are actively running Meta ads but do not show a TikTok pixel. Return company name, website, location, paid-social signal, opportunity gap, and why-now notes. Prefer complete collection over a narrow ranked subset.",
+      "methodology": "This list combines Shopify detection, a France footprint, visible Meta activity, and the absence of visible TikTok setup markers. It is designed to show a credible commercial slice, not to claim full market coverage.",
+      "analysisTitle": "What the data suggests",
+      "analysisParagraphs": [
+        "The useful pattern here is not just that french Shopify brands exist. It is that these brands already show signs of paid-social maturity through Meta while still lacking a visible TikTok setup. That makes the list commercially useful for a next-channel pitch rather than a generic ecommerce directory.",
+        "Once the paid-social motion is already visible, the sales job changes. An operator can lead with expansion, creative diversification, and incremental reach instead of trying to convince the brand to care about acquisition in the first place."
+      ],
+      "analysisTakeaways": [
+        "Meta activity is the filter that makes the TikTok gap commercially useful.",
+        "The list works best for next-channel outreach, not broad DTC prospecting.",
+        "Missing TikTok matters most when the brand already looks comfortable with paid acquisition."
+      ],
+      "articleSections": [
+        {
+          "title": "Why this segment is more actionable than a broad brand list",
+          "paragraphs": [
+            "A broad list of french Shopify brands does not say much about timing or intent. The added value here is the visible Meta activity. That tells you the company already spends on paid acquisition and already values creative, audience, and measurement enough to keep a performance channel alive.",
+            "That context turns a generic brand list into a more pointed opportunity list. The missing TikTok layer becomes a readable gap in an otherwise mature paid-social setup, which is a far stronger outreach wedge than vague growth interest."
+          ],
+          "bullets": [
+            "Paid-social maturity is more useful than generic ecommerce intent.",
+            "A missing TikTok layer creates a clear adjacent-channel story.",
+            "The best buyers are operators selling a next-step motion, not a full marketing reboot."
+          ]
+        },
+        {
+          "title": "How to use the list responsibly",
+          "paragraphs": [
+            "The right way to use a market like this is as a narrowed search space, not as an assumption that every row is untouched whitespace. Some brands may run TikTok through agency-managed or less visible setups, and some may simply be between campaigns.",
+            "That does not remove the value. It means the list is strongest when paired with quick manual validation and a tight service angle. The win is that you skip the broad market scan and start from a smaller pool where the commercial hypothesis is already clearer."
+          ],
+          "bullets": [
+            "Treat the list as prioritization, not certainty.",
+            "Manual validation is still worth doing on the top accounts.",
+            "Use the report to explain the market and the list to execute against it."
+          ]
+        }
+      ],
+      "signals": [
+        "France storefront or company footprint",
+        "Shopify detected",
+        "Meta ads or Meta pixel present",
+        "No TikTok pixel or setup detected",
+        "Paid-social-friendly DTC profile"
+      ],
+      "relatedSlugs": [
+        "shopify-germany-meta-no-tiktok",
+        "shopify-uk-meta-no-tiktok",
+        "shopify-sweden-meta-no-tiktok"
+      ],
+      "reportSlug": "france-meta-tiktok-gap",
+      "siteUrl": "https://www.enrichanything.com/markets/shopify-france-meta-no-tiktok",
+      "reportUrl": "https://www.enrichanything.com/reports/france-meta-tiktok-gap",
+      "status": "template only",
+      "live": false,
+      "dataSource": "template",
+      "dataNote": "This market note has not published a usable sample yet.",
+      "rowCount": 0,
+      "collectionTarget": 20,
+      "lastSuccessAt": "2026-03-23T16:51:15.675+00:00",
+      "lastSuccessLabel": "March 23, 2026",
+      "lastStatus": "paused",
+      "statsSource": "page_content",
+      "stats": [
+        {
+          "value": "20+",
+          "label": "matching brands",
+          "detail": "Published source sample",
+          "note": ""
+        }
+      ],
+      "sampleRows": []
+    },
+    {
+      "kind": "market",
+      "slug": "shopify-france-klaviyo-no-sms",
+      "title": "Shopify brands in France using Klaviyo but not SMS tooling",
+      "summary": "A public list of French Shopify brands that appear to run Klaviyo email while still missing a visible SMS layer.",
+      "audience": "Email/SMS agencies, retention freelancers, Shopify lifecycle consultants",
+      "ctaLabel": "Open this search in EnrichAnything",
+      "ctaNote": "This is strongest for operators selling retention expansion to brands already serious about lifecycle email.",
+      "ctaPrompt": "Build a broad, source-backed collection from Shopify storefront checks and public lifecycle tooling traces to find Shopify brands in France using Klaviyo email but not showing visible SMS tooling such as Attentive, Yotpo SMSBump, Postscript, or Klaviyo SMS. Return company name, website, location, email signal, SMS gap, and why-now notes.",
+      "methodology": "This list combines Shopify detection, a France footprint, visible Klaviyo usage, and the absence of visible SMS tooling. It is meant to isolate a commercially useful lifecycle gap, not to claim complete market coverage.",
+      "analysisTitle": "What the data suggests",
+      "analysisParagraphs": [
+        "The value in this slice is not simply that these french Shopify brands use Klaviyo. The more useful pattern is that they already show signs of lifecycle-email maturity without a visible SMS layer, which often means the retention motion is partially built but not fully expanded.",
+        "That makes the list stronger than a generic ecommerce directory. The outreach can lead with completion of an existing retention stack rather than pitching retention from zero."
+      ],
+      "analysisTakeaways": [
+        "Klaviyo is the maturity signal that makes the missing SMS layer useful.",
+        "The wedge is retention expansion, not generic martech cleanup.",
+        "This list is best for operators who can articulate why email-first brands should add SMS next."
+      ],
+      "articleSections": [
+        {
+          "title": "Why this is more actionable than a broad Shopify retention list",
+          "paragraphs": [
+            "A broad list of Shopify brands says little about what kind of lifecycle system is already in place. Klaviyo changes that. It shows the brand is already investing in owned-channel retention, which means an absent SMS layer is more likely to represent unfinished stack depth than total channel immaturity.",
+            "That difference matters commercially. The service offer can focus on extending an existing motion rather than trying to convince the brand that retention matters in the first place."
+          ],
+          "bullets": [
+            "Klaviyo is the signal that makes the gap commercially legible.",
+            "The opportunity is strongest where email maturity already exists.",
+            "SMS works here as a stack-extension pitch, not a cold-start pitch."
+          ]
+        },
+        {
+          "title": "How a lifecycle agency should use the note",
+          "paragraphs": [
+            "The note works best as market framing. It explains why the linked list matters and what kind of account pattern the rows represent. That gives the operator a cleaner narrative than a raw spreadsheet of storefronts.",
+            "The actual workflow still begins with validation on the top rows. The note compresses the market logic. The list is where the real execution starts."
+          ],
+          "bullets": [
+            "Use the report to explain the segment and the list to prioritize targets.",
+            "Verify top accounts before outreach, especially when SMS is less visible.",
+            "Lead with retention depth and owned-channel completion rather than generic messaging."
+          ]
+        }
+      ],
+      "signals": [
+        "France storefront or company footprint",
+        "Shopify detected",
+        "Klaviyo present",
+        "No visible SMS tooling detected",
+        "Lifecycle-email-friendly DTC profile"
+      ],
+      "relatedSlugs": [
+        "shopify-france-meta-no-tiktok",
+        "shopify-germany-meta-no-tiktok"
+      ],
+      "reportSlug": "france-klaviyo-sms-gap",
+      "siteUrl": "https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms",
+      "reportUrl": "https://www.enrichanything.com/reports/france-klaviyo-sms-gap",
+      "status": "live",
+      "live": true,
+      "dataSource": "collected_sample",
+      "dataNote": "Published from a collected source sample based on the latest published update from March 27, 2026.",
+      "rowCount": 20,
+      "collectionTarget": 20,
+      "lastSuccessAt": "2026-03-27T05:41:48.798+00:00",
+      "lastSuccessLabel": "March 27, 2026",
+      "lastStatus": "paused",
+      "statsSource": "",
+      "stats": [],
+      "sampleRows": [
+        {
+          "company": "La Crique",
+          "location": "France",
+          "signal": "Shopify brand (confirmed), French-made beauty brand with recent reviews in March 2026 but no evidence of Klaviyo/email stack or SMS tooling visible",
+          "gap": "No evidence of Klaviyo/email stack or SMS tooling visible",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "Le Slip Français",
+          "location": "France",
+          "signal": "Shopify Plus store using Klaviyo for CRM/email; no SMS tools mentioned; French brand",
+          "gap": "No SMS tools mentioned",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "Maison Fauve",
+          "location": "France",
+          "signal": "French brand with recent Spring 2026 collection launch Mar 19 (within priority window), likely Shopify given context but Klaviyo/SMS unconfirmed",
+          "gap": "No visible SMS tooling detected",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "Mieux Que Des Fleurs",
+          "location": "France",
+          "signal": "Shopify brand using Klaviyo email stack; no SMS tooling mentioned",
+          "gap": "No SMS tooling mentioned",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        }
+      ]
+    },
+    {
+      "kind": "market",
+      "slug": "shopify-germany-meta-no-tiktok",
+      "title": "Shopify brands in Germany running Meta ads but not TikTok",
+      "summary": "A public list of German Shopify brands that appear active on Meta but do not show a TikTok setup.",
+      "audience": "EU TikTok agencies and DTC growth freelancers",
+      "ctaLabel": "Open this search in EnrichAnything",
+      "ctaNote": "This is most useful for teams selling channel expansion to brands already spending on paid social.",
+      "ctaPrompt": "Find Shopify brands in Germany that appear to be running Meta ads but do not show a TikTok pixel, and return source-backed rows with company name, website, city, paid-social signal, detected stack, and why-now notes.",
+      "methodology": "This list combines ecommerce stack detection, public marketing signals, country inference, and the absence of a TikTok implementation marker. It is meant to show a credible sample, not claim full market coverage.",
+      "analysisTitle": "What the data suggests",
+      "analysisParagraphs": [
+        "The useful signal here is not simply that these brands use Meta. It is that they already show paid-social maturity while still lacking any visible TikTok setup, which makes this a channel-expansion list rather than a generic ecommerce directory.",
+        "That distinction matters commercially. Brands already spending on Meta do not need to be sold on performance marketing; they need a credible argument for the next channel. The absence of TikTok instrumentation creates that contrast and gives the outreach a specific point of view instead of a vague growth pitch."
+      ],
+      "analysisTakeaways": [
+        "Paid social activity is a stronger readiness signal than broad DTC intent alone.",
+        "Missing TikTok instrumentation matters most when it appears alongside visible Meta activity.",
+        "The best outreach angle is incremental growth, not platform education."
+      ],
+      "articleSections": [
+        {
+          "title": "Why this segment is commercially useful",
+          "paragraphs": [
+            "A broad list of German Shopify brands does not say much about willingness to buy. This segment is narrower and more actionable because it starts from visible paid-social activity. Once Meta activity is already present, the question is not whether the brand believes in paid acquisition at all, but whether another performance channel is likely to matter in the next planning cycle.",
+            "That changes the economics of outreach. An agency or consultant can lead with budget reallocation, creative expansion, or incremental reach rather than trying to teach first principles. The list works because the missing TikTok layer is legible against behavior the market already understands."
+          ],
+          "bullets": [
+            "Meta activity reduces the need for generic education.",
+            "A missing TikTok layer creates a clear before-and-after story for outreach.",
+            "The segment is strongest for teams selling a next-channel motion, not a full-funnel retainer."
+          ]
+        },
+        {
+          "title": "Where the false positives tend to come from",
+          "paragraphs": [
+            "The main false-positive risk is simple implementation ambiguity. Some brands may run TikTok through agency-managed setups, server-side tracking, or temporary campaign configurations that do not surface in a straightforward front-end scan. Others may be experimenting without a durable instrumentation footprint.",
+            "That is why this list works best as a source-backed starting point rather than a claim that every row is untouched whitespace. The commercial advantage comes from compressing the search space to a tighter cluster of likely opportunities, then validating a handful of accounts manually before sending outbound."
+          ],
+          "bullets": [
+            "Agency-managed or server-side setups can hide real adoption.",
+            "Seasonal brands may look inactive on one channel when they are simply between campaigns.",
+            "The best workflow is list first, manual review second, outreach third."
+          ]
+        }
+      ],
+      "signals": [
+        "Germany storefront or company footprint",
+        "Shopify detected",
+        "Meta ads or Meta pixel present",
+        "No TikTok pixel detected",
+        "Paid-social-friendly DTC profile"
+      ],
+      "relatedSlugs": [
+        "series-a-saas-hiring-sdr-no-sequencing",
+        "accounting-firms-hiring-bookkeepers-no-automation"
+      ],
+      "reportSlug": "germany-meta-tiktok-gap",
+      "siteUrl": "https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok",
+      "reportUrl": "https://www.enrichanything.com/reports/germany-meta-tiktok-gap",
+      "status": "collecting sample",
+      "live": false,
+      "dataSource": "collecting_sample",
+      "dataNote": "This market note is still being prepared from a source-backed market scan as of March 23, 2026.",
+      "rowCount": 12,
+      "collectionTarget": 20,
+      "lastSuccessAt": "2026-03-23T16:51:55.677+00:00",
+      "lastSuccessLabel": "March 23, 2026",
+      "lastStatus": "paused",
+      "statsSource": "page_content",
+      "stats": [
+        {
+          "value": "312",
+          "label": "matching brands",
+          "detail": "Current tracked sample",
+          "note": ""
+        },
+        {
+          "value": "73%",
+          "label": "missing TikTok",
+          "detail": "Within the paid-social-active sample",
+          "note": ""
+        },
+        {
+          "value": "24",
+          "label": "new matches / day",
+          "detail": "Estimated daily additions",
+          "note": ""
+        }
+      ],
+      "sampleRows": [
+        {
+          "company": "BONNYBIRD",
+          "location": "Germany",
+          "signal": "Munich-based Shopify-like jewelry brand with high customer count indicating mid-market activity",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+        },
+        {
+          "company": "Tierliebhaber",
+          "location": "Germany",
+          "signal": "Listed in adspends top Meta advertisers Germany, pet brand",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+        },
+        {
+          "company": "Nø Cosmetics",
+          "location": "Germany",
+          "signal": "German Shopify cosmetics store with recent activity",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+        },
+        {
+          "company": "Lieblingsglas",
+          "location": "Germany",
+          "signal": "German kitchenware ecom site",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+        }
+      ]
+    },
+    {
+      "kind": "market",
+      "slug": "shopify-germany-klaviyo-no-sms",
+      "title": "Shopify brands in Germany using Klaviyo but not SMS tooling",
+      "summary": "A public list of German Shopify brands that appear to run Klaviyo email while still missing a visible SMS layer.",
+      "audience": "Email/SMS agencies, retention freelancers, Shopify lifecycle consultants",
+      "ctaLabel": "Open this search in EnrichAnything",
+      "ctaNote": "This is strongest for operators selling retention expansion to brands already serious about lifecycle email.",
+      "ctaPrompt": "Build a broad, source-backed collection from Shopify storefront checks and public lifecycle tooling traces to find Shopify brands in Germany using Klaviyo email but not showing visible SMS tooling such as Attentive, Yotpo SMSBump, Postscript, or Klaviyo SMS. Return company name, website, location, email signal, SMS gap, and why-now notes.",
+      "methodology": "This list combines Shopify detection, a Germany footprint, visible Klaviyo usage, and the absence of visible SMS tooling. It is meant to isolate a commercially useful lifecycle gap, not to claim complete market coverage.",
+      "analysisTitle": "What the data suggests",
+      "analysisParagraphs": [
+        "The value in this slice is not simply that these german Shopify brands use Klaviyo. The more useful pattern is that they already show signs of lifecycle-email maturity without a visible SMS layer, which often means the retention motion is partially built but not fully expanded.",
+        "That makes the list stronger than a generic ecommerce directory. The outreach can lead with completion of an existing retention stack rather than pitching retention from zero."
+      ],
+      "analysisTakeaways": [
+        "Klaviyo is the maturity signal that makes the missing SMS layer useful.",
+        "The wedge is retention expansion, not generic martech cleanup.",
+        "This list is best for operators who can articulate why email-first brands should add SMS next."
+      ],
+      "articleSections": [
+        {
+          "title": "Why this is more actionable than a broad Shopify retention list",
+          "paragraphs": [
+            "A broad list of Shopify brands says little about what kind of lifecycle system is already in place. Klaviyo changes that. It shows the brand is already investing in owned-channel retention, which means an absent SMS layer is more likely to represent unfinished stack depth than total channel immaturity.",
+            "That difference matters commercially. The service offer can focus on extending an existing motion rather than trying to convince the brand that retention matters in the first place."
+          ],
+          "bullets": [
+            "Klaviyo is the signal that makes the gap commercially legible.",
+            "The opportunity is strongest where email maturity already exists.",
+            "SMS works here as a stack-extension pitch, not a cold-start pitch."
+          ]
+        },
+        {
+          "title": "How a lifecycle agency should use the note",
+          "paragraphs": [
+            "The note works best as market framing. It explains why the linked list matters and what kind of account pattern the rows represent. That gives the operator a cleaner narrative than a raw spreadsheet of storefronts.",
+            "The actual workflow still begins with validation on the top rows. The note compresses the market logic. The list is where the real execution starts."
+          ],
+          "bullets": [
+            "Use the report to explain the segment and the list to prioritize targets.",
+            "Verify top accounts before outreach, especially when SMS is less visible.",
+            "Lead with retention depth and owned-channel completion rather than generic messaging."
+          ]
+        }
+      ],
+      "signals": [
+        "Germany storefront or company footprint",
+        "Shopify detected",
+        "Klaviyo present",
+        "No visible SMS tooling detected",
+        "Lifecycle-email-friendly DTC profile"
+      ],
+      "relatedSlugs": [
+        "shopify-germany-meta-no-tiktok",
+        "shopify-france-klaviyo-no-sms"
+      ],
+      "reportSlug": "germany-klaviyo-sms-gap",
+      "siteUrl": "https://www.enrichanything.com/markets/shopify-germany-klaviyo-no-sms",
+      "reportUrl": "https://www.enrichanything.com/reports/germany-klaviyo-sms-gap",
+      "status": "live",
+      "live": true,
+      "dataSource": "collected_sample",
+      "dataNote": "Published from a collected source sample based on the latest published update from March 28, 2026.",
+      "rowCount": 20,
+      "collectionTarget": 20,
+      "lastSuccessAt": "2026-03-28T03:15:10.244+00:00",
+      "lastSuccessLabel": "March 28, 2026",
+      "lastStatus": "paused",
+      "statsSource": "",
+      "stats": [],
+      "sampleRows": [
+        {
+          "company": "The Haut Company",
+          "location": "Germany",
+          "signal": "Shopify store using Klaviyo for newsletters, no mention of SMS tools like Postscript/Attentive; skincare with repeat-purchase potential (serums, toners); recent 2026 activity",
+          "gap": "No mention of SMS tools like Postscript/Attentive",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "Xeno Naturkosmetik",
+          "location": "Germany",
+          "signal": "Shopify store (.myshopify.com) selling skincare for repeat purchase (serums, creams); newsletter signup visible as email stack; no SMS tools mentioned.",
+          "gap": "No SMS tools mentioned",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "Kosmetik Balance",
+          "location": "Germany",
+          "signal": "Shopify store (.myshopify.com) selling skincare products like serums and creams for replenishment; no Klaviyo/SMS visible but fits criteria partially.",
+          "gap": "No visible SMS tooling detected",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "GirlGotLashes",
+          "location": "Germany",
+          "signal": "Shopify brand using Klaviyo (confirmed in case study); repeat-purchase consumables like lash extensions/glue; no Postscript/Attentive mentioned.",
+          "gap": "No visible SMS tooling detected",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        }
+      ]
+    },
+    {
+      "kind": "market",
+      "slug": "shopify-spain-meta-no-tiktok",
+      "title": "Shopify brands in Spain running Meta ads but not TikTok",
+      "summary": "A public list of Spanish Shopify brands that appear active on Meta but do not show a TikTok setup.",
+      "audience": "EU TikTok agencies and DTC growth freelancers",
+      "ctaLabel": "Open this search in EnrichAnything",
+      "ctaNote": "This is most useful for teams selling channel expansion to brands that already appear comfortable with paid social.",
+      "ctaPrompt": "Build a broad, source-backed collection from Meta Ad Library advertisers and public storefront checks to find Shopify brands in Spain that are actively running Meta ads but do not show a TikTok pixel. Return company name, website, location, paid-social signal, opportunity gap, and why-now notes. Prefer complete collection over a narrow ranked subset.",
+      "methodology": "This list combines Shopify detection, a Spain footprint, visible Meta activity, and the absence of visible TikTok setup markers. It is designed to show a credible commercial slice, not to claim full market coverage.",
+      "analysisTitle": "What the data suggests",
+      "analysisParagraphs": [
+        "The useful pattern here is not just that spanish Shopify brands exist. It is that these brands already show signs of paid-social maturity through Meta while still lacking a visible TikTok setup. That makes the list commercially useful for a next-channel pitch rather than a generic ecommerce directory.",
+        "Once the paid-social motion is already visible, the sales job changes. An operator can lead with expansion, creative diversification, and incremental reach instead of trying to convince the brand to care about acquisition in the first place."
+      ],
+      "analysisTakeaways": [
+        "Meta activity is the filter that makes the TikTok gap commercially useful.",
+        "The list works best for next-channel outreach, not broad DTC prospecting.",
+        "Missing TikTok matters most when the brand already looks comfortable with paid acquisition."
+      ],
+      "articleSections": [
+        {
+          "title": "Why this segment is more actionable than a broad brand list",
+          "paragraphs": [
+            "A broad list of spanish Shopify brands does not say much about timing or intent. The added value here is the visible Meta activity. That tells you the company already spends on paid acquisition and already values creative, audience, and measurement enough to keep a performance channel alive.",
+            "That context turns a generic brand list into a more pointed opportunity list. The missing TikTok layer becomes a readable gap in an otherwise mature paid-social setup, which is a far stronger outreach wedge than vague growth interest."
+          ],
+          "bullets": [
+            "Paid-social maturity is more useful than generic ecommerce intent.",
+            "A missing TikTok layer creates a clear adjacent-channel story.",
+            "The best buyers are operators selling a next-step motion, not a full marketing reboot."
+          ]
+        },
+        {
+          "title": "How to use the list responsibly",
+          "paragraphs": [
+            "The right way to use a market like this is as a narrowed search space, not as an assumption that every row is untouched whitespace. Some brands may run TikTok through agency-managed or less visible setups, and some may simply be between campaigns.",
+            "That does not remove the value. It means the list is strongest when paired with quick manual validation and a tight service angle. The win is that you skip the broad market scan and start from a smaller pool where the commercial hypothesis is already clearer."
+          ],
+          "bullets": [
+            "Treat the list as prioritization, not certainty.",
+            "Manual validation is still worth doing on the top accounts.",
+            "Use the report to explain the market and the list to execute against it."
+          ]
+        }
+      ],
+      "signals": [
+        "Spain storefront or company footprint",
+        "Shopify detected",
+        "Meta ads or Meta pixel present",
+        "No TikTok pixel or setup detected",
+        "Paid-social-friendly DTC profile"
+      ],
+      "relatedSlugs": [
+        "shopify-germany-meta-no-tiktok",
+        "shopify-france-meta-no-tiktok",
+        "shopify-uk-meta-no-tiktok",
+        "shopify-sweden-meta-no-tiktok"
+      ],
+      "reportSlug": "spain-meta-tiktok-gap",
+      "siteUrl": "https://www.enrichanything.com/markets/shopify-spain-meta-no-tiktok",
+      "reportUrl": "https://www.enrichanything.com/reports/spain-meta-tiktok-gap",
+      "status": "template only",
+      "live": false,
+      "dataSource": "template",
+      "dataNote": "This market note is being prepared from a source-backed collection sample.",
+      "rowCount": 0,
+      "collectionTarget": 20,
+      "lastSuccessAt": "",
+      "lastSuccessLabel": "",
+      "lastStatus": "",
+      "statsSource": "page_content",
+      "stats": [
+        {
+          "value": "20+",
+          "label": "matching brands",
+          "detail": "Published source sample",
+          "note": ""
+        }
+      ],
+      "sampleRows": []
+    },
+    {
+      "kind": "market",
+      "slug": "shopify-sweden-meta-no-tiktok",
+      "title": "Shopify brands in Sweden running Meta ads but not TikTok",
+      "summary": "A public list of Swedish Shopify brands that appear active on Meta but do not show a TikTok setup.",
+      "audience": "EU TikTok agencies and DTC growth freelancers",
+      "ctaLabel": "Open this search in EnrichAnything",
+      "ctaNote": "This is most useful for teams selling channel expansion to brands that already appear comfortable with paid social.",
+      "ctaPrompt": "Build a broad, source-backed collection from Meta Ad Library advertisers and public storefront checks to find Shopify brands in Sweden that are actively running Meta ads but do not show a TikTok pixel. Return company name, website, location, paid-social signal, opportunity gap, and why-now notes. Prefer complete collection over a narrow ranked subset.",
+      "methodology": "This list combines Shopify detection, a Sweden footprint, visible Meta activity, and the absence of visible TikTok setup markers. It is designed to show a credible commercial slice, not to claim full market coverage.",
+      "analysisTitle": "What the data suggests",
+      "analysisParagraphs": [
+        "The useful pattern here is not just that swedish Shopify brands exist. It is that these brands already show signs of paid-social maturity through Meta while still lacking a visible TikTok setup. That makes the list commercially useful for a next-channel pitch rather than a generic ecommerce directory.",
+        "Once the paid-social motion is already visible, the sales job changes. An operator can lead with expansion, creative diversification, and incremental reach instead of trying to convince the brand to care about acquisition in the first place."
+      ],
+      "analysisTakeaways": [
+        "Meta activity is the filter that makes the TikTok gap commercially useful.",
+        "The list works best for next-channel outreach, not broad DTC prospecting.",
+        "Missing TikTok matters most when the brand already looks comfortable with paid acquisition."
+      ],
+      "articleSections": [
+        {
+          "title": "Why this segment is more actionable than a broad brand list",
+          "paragraphs": [
+            "A broad list of swedish Shopify brands does not say much about timing or intent. The added value here is the visible Meta activity. That tells you the company already spends on paid acquisition and already values creative, audience, and measurement enough to keep a performance channel alive.",
+            "That context turns a generic brand list into a more pointed opportunity list. The missing TikTok layer becomes a readable gap in an otherwise mature paid-social setup, which is a far stronger outreach wedge than vague growth interest."
+          ],
+          "bullets": [
+            "Paid-social maturity is more useful than generic ecommerce intent.",
+            "A missing TikTok layer creates a clear adjacent-channel story.",
+            "The best buyers are operators selling a next-step motion, not a full marketing reboot."
+          ]
+        },
+        {
+          "title": "How to use the list responsibly",
+          "paragraphs": [
+            "The right way to use a market like this is as a narrowed search space, not as an assumption that every row is untouched whitespace. Some brands may run TikTok through agency-managed or less visible setups, and some may simply be between campaigns.",
+            "That does not remove the value. It means the list is strongest when paired with quick manual validation and a tight service angle. The win is that you skip the broad market scan and start from a smaller pool where the commercial hypothesis is already clearer."
+          ],
+          "bullets": [
+            "Treat the list as prioritization, not certainty.",
+            "Manual validation is still worth doing on the top accounts.",
+            "Use the report to explain the market and the list to execute against it."
+          ]
+        }
+      ],
+      "signals": [
+        "Sweden storefront or company footprint",
+        "Shopify detected",
+        "Meta ads or Meta pixel present",
+        "No TikTok pixel or setup detected",
+        "Paid-social-friendly DTC profile"
+      ],
+      "relatedSlugs": [
+        "shopify-germany-meta-no-tiktok",
+        "shopify-france-meta-no-tiktok",
+        "shopify-uk-meta-no-tiktok"
+      ],
+      "reportSlug": "sweden-meta-tiktok-gap",
+      "siteUrl": "https://www.enrichanything.com/markets/shopify-sweden-meta-no-tiktok",
+      "reportUrl": "https://www.enrichanything.com/reports/sweden-meta-tiktok-gap",
+      "status": "template only",
+      "live": false,
+      "dataSource": "template",
+      "dataNote": "This market note has not published a usable sample yet.",
+      "rowCount": 0,
+      "collectionTarget": 20,
+      "lastSuccessAt": "2026-03-23T17:06:06.37+00:00",
+      "lastSuccessLabel": "March 23, 2026",
+      "lastStatus": "paused",
+      "statsSource": "page_content",
+      "stats": [
+        {
+          "value": "20+",
+          "label": "matching brands",
+          "detail": "Published source sample",
+          "note": ""
+        }
+      ],
+      "sampleRows": []
+    },
+    {
+      "kind": "market",
+      "slug": "shopify-netherlands-meta-no-tiktok",
+      "title": "Shopify brands in the Netherlands running Meta ads but not TikTok",
+      "summary": "A public list of Dutch Shopify brands that appear active on Meta but do not show a TikTok setup.",
+      "audience": "EU TikTok agencies and DTC growth freelancers",
+      "ctaLabel": "Open this search in EnrichAnything",
+      "ctaNote": "This is most useful for teams selling channel expansion to brands that already appear comfortable with paid social.",
+      "ctaPrompt": "Build a broad, source-backed collection from Meta Ad Library advertisers and public storefront checks to find Shopify brands in the Netherlands that are actively running Meta ads but do not show a TikTok pixel. Return company name, website, location, paid-social signal, opportunity gap, and why-now notes. Prefer complete collection over a narrow ranked subset.",
+      "methodology": "This list combines Shopify detection, a the Netherlands footprint, visible Meta activity, and the absence of visible TikTok setup markers. It is designed to show a credible commercial slice, not to claim full market coverage.",
+      "analysisTitle": "What the data suggests",
+      "analysisParagraphs": [
+        "The useful pattern here is not just that dutch Shopify brands exist. It is that these brands already show signs of paid-social maturity through Meta while still lacking a visible TikTok setup. That makes the list commercially useful for a next-channel pitch rather than a generic ecommerce directory.",
+        "Once the paid-social motion is already visible, the sales job changes. An operator can lead with expansion, creative diversification, and incremental reach instead of trying to convince the brand to care about acquisition in the first place."
+      ],
+      "analysisTakeaways": [
+        "Meta activity is the filter that makes the TikTok gap commercially useful.",
+        "The list works best for next-channel outreach, not broad DTC prospecting.",
+        "Missing TikTok matters most when the brand already looks comfortable with paid acquisition."
+      ],
+      "articleSections": [
+        {
+          "title": "Why this segment is more actionable than a broad brand list",
+          "paragraphs": [
+            "A broad list of dutch Shopify brands does not say much about timing or intent. The added value here is the visible Meta activity. That tells you the company already spends on paid acquisition and already values creative, audience, and measurement enough to keep a performance channel alive.",
+            "That context turns a generic brand list into a more pointed opportunity list. The missing TikTok layer becomes a readable gap in an otherwise mature paid-social setup, which is a far stronger outreach wedge than vague growth interest."
+          ],
+          "bullets": [
+            "Paid-social maturity is more useful than generic ecommerce intent.",
+            "A missing TikTok layer creates a clear adjacent-channel story.",
+            "The best buyers are operators selling a next-step motion, not a full marketing reboot."
+          ]
+        },
+        {
+          "title": "How to use the list responsibly",
+          "paragraphs": [
+            "The right way to use a market like this is as a narrowed search space, not as an assumption that every row is untouched whitespace. Some brands may run TikTok through agency-managed or less visible setups, and some may simply be between campaigns.",
+            "That does not remove the value. It means the list is strongest when paired with quick manual validation and a tight service angle. The win is that you skip the broad market scan and start from a smaller pool where the commercial hypothesis is already clearer."
+          ],
+          "bullets": [
+            "Treat the list as prioritization, not certainty.",
+            "Manual validation is still worth doing on the top accounts.",
+            "Use the report to explain the market and the list to execute against it."
+          ]
+        }
+      ],
+      "signals": [
+        "the Netherlands storefront or company footprint",
+        "Shopify detected",
+        "Meta ads or Meta pixel present",
+        "No TikTok pixel or setup detected",
+        "Paid-social-friendly DTC profile"
+      ],
+      "relatedSlugs": [
+        "shopify-germany-meta-no-tiktok",
+        "shopify-france-meta-no-tiktok",
+        "shopify-uk-meta-no-tiktok",
+        "shopify-sweden-meta-no-tiktok"
+      ],
+      "reportSlug": "netherlands-meta-tiktok-gap",
+      "siteUrl": "https://www.enrichanything.com/markets/shopify-netherlands-meta-no-tiktok",
+      "reportUrl": "https://www.enrichanything.com/reports/netherlands-meta-tiktok-gap",
+      "status": "template only",
+      "live": false,
+      "dataSource": "template",
+      "dataNote": "This market note is being prepared from a source-backed collection sample.",
+      "rowCount": 0,
+      "collectionTarget": 20,
+      "lastSuccessAt": "",
+      "lastSuccessLabel": "",
+      "lastStatus": "",
+      "statsSource": "page_content",
+      "stats": [
+        {
+          "value": "20+",
+          "label": "matching brands",
+          "detail": "Published source sample",
+          "note": ""
+        }
+      ],
+      "sampleRows": []
+    },
+    {
+      "kind": "market",
+      "slug": "shopify-uk-meta-no-tiktok",
+      "title": "Shopify brands in the UK running Meta ads but not TikTok",
+      "summary": "A public list of UK Shopify brands that appear active on Meta but do not show a TikTok setup.",
+      "audience": "EU TikTok agencies and DTC growth freelancers",
+      "ctaLabel": "Open this search in EnrichAnything",
+      "ctaNote": "This is most useful for teams selling channel expansion to brands that already appear comfortable with paid social.",
+      "ctaPrompt": "Build a broad, source-backed collection from Meta Ad Library advertisers and public storefront checks to find Shopify brands in the UK that are actively running Meta ads but do not show a TikTok pixel. Return company name, website, location, paid-social signal, opportunity gap, and why-now notes. Prefer complete collection over a narrow ranked subset.",
+      "methodology": "This list combines Shopify detection, a the UK footprint, visible Meta activity, and the absence of visible TikTok setup markers. It is designed to show a credible commercial slice, not to claim full market coverage.",
+      "analysisTitle": "What the data suggests",
+      "analysisParagraphs": [
+        "The useful pattern here is not just that uk Shopify brands exist. It is that these brands already show signs of paid-social maturity through Meta while still lacking a visible TikTok setup. That makes the list commercially useful for a next-channel pitch rather than a generic ecommerce directory.",
+        "Once the paid-social motion is already visible, the sales job changes. An operator can lead with expansion, creative diversification, and incremental reach instead of trying to convince the brand to care about acquisition in the first place."
+      ],
+      "analysisTakeaways": [
+        "Meta activity is the filter that makes the TikTok gap commercially useful.",
+        "The list works best for next-channel outreach, not broad DTC prospecting.",
+        "Missing TikTok matters most when the brand already looks comfortable with paid acquisition."
+      ],
+      "articleSections": [
+        {
+          "title": "Why this segment is more actionable than a broad brand list",
+          "paragraphs": [
+            "A broad list of uk Shopify brands does not say much about timing or intent. The added value here is the visible Meta activity. That tells you the company already spends on paid acquisition and already values creative, audience, and measurement enough to keep a performance channel alive.",
+            "That context turns a generic brand list into a more pointed opportunity list. The missing TikTok layer becomes a readable gap in an otherwise mature paid-social setup, which is a far stronger outreach wedge than vague growth interest."
+          ],
+          "bullets": [
+            "Paid-social maturity is more useful than generic ecommerce intent.",
+            "A missing TikTok layer creates a clear adjacent-channel story.",
+            "The best buyers are operators selling a next-step motion, not a full marketing reboot."
+          ]
+        },
+        {
+          "title": "How to use the list responsibly",
+          "paragraphs": [
+            "The right way to use a market like this is as a narrowed search space, not as an assumption that every row is untouched whitespace. Some brands may run TikTok through agency-managed or less visible setups, and some may simply be between campaigns.",
+            "That does not remove the value. It means the list is strongest when paired with quick manual validation and a tight service angle. The win is that you skip the broad market scan and start from a smaller pool where the commercial hypothesis is already clearer."
+          ],
+          "bullets": [
+            "Treat the list as prioritization, not certainty.",
+            "Manual validation is still worth doing on the top accounts.",
+            "Use the report to explain the market and the list to execute against it."
+          ]
+        }
+      ],
+      "signals": [
+        "the UK storefront or company footprint",
+        "Shopify detected",
+        "Meta ads or Meta pixel present",
+        "No TikTok pixel or setup detected",
+        "Paid-social-friendly DTC profile"
+      ],
+      "relatedSlugs": [
+        "shopify-germany-meta-no-tiktok",
+        "shopify-france-meta-no-tiktok",
+        "shopify-sweden-meta-no-tiktok"
+      ],
+      "reportSlug": "uk-meta-tiktok-gap",
+      "siteUrl": "https://www.enrichanything.com/markets/shopify-uk-meta-no-tiktok",
+      "reportUrl": "https://www.enrichanything.com/reports/uk-meta-tiktok-gap",
+      "status": "live",
+      "live": true,
+      "dataSource": "collected_sample",
+      "dataNote": "Published from a collected source sample based on the latest published update from March 23, 2026.",
+      "rowCount": 22,
+      "collectionTarget": 20,
+      "lastSuccessAt": "2026-03-23T17:05:16.253+00:00",
+      "lastSuccessLabel": "March 23, 2026",
+      "lastStatus": "paused",
+      "statsSource": "page_content",
+      "stats": [
+        {
+          "value": "20+",
+          "label": "matching brands",
+          "detail": "Published source sample",
+          "note": ""
+        }
+      ],
+      "sampleRows": [
+        {
+          "company": "Marks and Spencer",
+          "location": "UK",
+          "signal": "Top Meta advertiser in UK with 940 ads, 2.2B views, $33.1M spend indicating active ecommerce advertising on Meta",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+        },
+        {
+          "company": "ASOS",
+          "location": "UK",
+          "signal": "Top Meta advertiser in UK with 490 ads, 853.5M views, $12.8M spend",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+        },
+        {
+          "company": "Gymshark",
+          "location": "UK",
+          "signal": "Top Meta advertiser in UK with 287 ads, 257.8M views, $3.9M spend; active ad library with high impressions",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+        },
+        {
+          "company": "Nutrition Geeks",
+          "location": "UK",
+          "signal": "Top Meta advertiser in UK with 782 ads, 1.2B views, $17.9M spend",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+        }
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "kind": "report",
+      "slug": "netherlands-meta-tiktok-gap",
+      "title": "Dutch Shopify brands still underuse TikTok after proving Meta demand",
+      "summary": "A public research note on how often dutch Shopify brands appear active on Meta before showing any visible TikTok setup.",
+      "contextLine": "Updated from EnrichAnything market scans · public sample, not a census",
+      "marketSlug": "shopify-netherlands-meta-no-tiktok",
+      "marketUrl": "https://www.enrichanything.com/markets/shopify-netherlands-meta-no-tiktok",
+      "siteUrl": "https://www.enrichanything.com/reports/netherlands-meta-tiktok-gap",
+      "status": "template only",
+      "live": false,
+      "dataSource": "template",
+      "dataNote": "This report note is being prepared from a source-backed market sample.",
+      "rowCount": 0,
+      "lastSuccessAt": "",
+      "lastSuccessLabel": "",
+      "lastStatus": "",
+      "citationText": "",
+      "stats": [],
+      "chartRows": [],
+      "sampleRows": []
+    },
+    {
+      "kind": "report",
+      "slug": "france-klaviyo-sms-gap",
+      "title": "French Shopify brands still leave SMS out of an otherwise mature Klaviyo stack",
+      "summary": "A public research note on how often french Shopify brands appear to use Klaviyo email without a visible SMS layer.",
+      "contextLine": "Updated from EnrichAnything market scans · live snapshot from March 27, 2026",
+      "marketSlug": "shopify-france-klaviyo-no-sms",
+      "marketUrl": "https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms",
+      "siteUrl": "https://www.enrichanything.com/reports/france-klaviyo-sms-gap",
+      "status": "live",
+      "live": true,
+      "dataSource": "collected_sample",
+      "dataNote": "Built from the latest published EnrichAnything market scan.",
+      "rowCount": 20,
+      "lastSuccessAt": "2026-03-27T05:41:48.798+00:00",
+      "lastSuccessLabel": "March 27, 2026",
+      "lastStatus": "paused",
+      "citationText": "Based on EnrichAnything's latest scan of matching brands, 100% already include an explicit gap signal and 60% include a timing note.",
+      "stats": [
+        {
+          "value": "100%",
+          "label": "rows with explicit gap signal",
+          "detail": "",
+          "note": "Useful for turning the list into a clear angle"
+        },
+        {
+          "value": "60%",
+          "label": "rows with timing signal",
+          "detail": "",
+          "note": "Rows that already explain why the window matters now"
+        }
+      ],
+      "chartRows": [
+        {
+          "value": "100",
+          "label": "Rows with signal evidence",
+          "detail": "",
+          "note": "How many rows already carry an explicit signal note"
+        },
+        {
+          "value": "100",
+          "label": "Rows with gap note",
+          "detail": "",
+          "note": "How many rows already expose the missing-tool or missing-motion angle"
+        },
+        {
+          "value": "60",
+          "label": "Rows with why-now note",
+          "detail": "",
+          "note": "How many rows already explain timing in the live sample"
+        }
+      ],
+      "sampleRows": [
+        {
+          "company": "La Crique",
+          "location": "France",
+          "signal": "Shopify brand (confirmed), French-made beauty brand with recent reviews in March 2026 but no evidence of Klaviyo/email stack or SMS tooling visible",
+          "gap": "No evidence of Klaviyo/email stack or SMS tooling visible",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "Le Slip Français",
+          "location": "France",
+          "signal": "Shopify Plus store using Klaviyo for CRM/email; no SMS tools mentioned; French brand",
+          "gap": "No SMS tools mentioned",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "Maison Fauve",
+          "location": "France",
+          "signal": "French brand with recent Spring 2026 collection launch Mar 19 (within priority window), likely Shopify given context but Klaviyo/SMS unconfirmed",
+          "gap": "No visible SMS tooling detected",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "Mieux Que Des Fleurs",
+          "location": "France",
+          "signal": "Shopify brand using Klaviyo email stack; no SMS tooling mentioned",
+          "gap": "No SMS tooling mentioned",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        }
+      ]
+    },
+    {
+      "kind": "report",
+      "slug": "france-meta-tiktok-gap",
+      "title": "French Shopify brands still underuse TikTok after proving Meta demand",
+      "summary": "A public research note on how often french Shopify brands appear active on Meta before showing any visible TikTok setup.",
+      "contextLine": "Updated from EnrichAnything market scans · public sample, not a census",
+      "marketSlug": "shopify-france-meta-no-tiktok",
+      "marketUrl": "https://www.enrichanything.com/markets/shopify-france-meta-no-tiktok",
+      "siteUrl": "https://www.enrichanything.com/reports/france-meta-tiktok-gap",
+      "status": "template only",
+      "live": false,
+      "dataSource": "template",
+      "dataNote": "The source list exists, but there are no published rows for this report yet.",
+      "rowCount": 0,
+      "lastSuccessAt": "2026-03-23T16:51:15.675+00:00",
+      "lastSuccessLabel": "March 23, 2026",
+      "lastStatus": "paused",
+      "citationText": "",
+      "stats": [],
+      "chartRows": [],
+      "sampleRows": []
+    },
+    {
+      "kind": "report",
+      "slug": "germany-klaviyo-sms-gap",
+      "title": "German Shopify brands still leave SMS out of an otherwise mature Klaviyo stack",
+      "summary": "A public research note on how often german Shopify brands appear to use Klaviyo email without a visible SMS layer.",
+      "contextLine": "Updated from EnrichAnything market scans · live snapshot from March 28, 2026",
+      "marketSlug": "shopify-germany-klaviyo-no-sms",
+      "marketUrl": "https://www.enrichanything.com/markets/shopify-germany-klaviyo-no-sms",
+      "siteUrl": "https://www.enrichanything.com/reports/germany-klaviyo-sms-gap",
+      "status": "live",
+      "live": true,
+      "dataSource": "collected_sample",
+      "dataNote": "Built from the latest published EnrichAnything market scan.",
+      "rowCount": 20,
+      "lastSuccessAt": "2026-03-28T03:15:10.244+00:00",
+      "lastSuccessLabel": "March 28, 2026",
+      "lastStatus": "paused",
+      "citationText": "Based on EnrichAnything's latest scan of matching brands, 100% already include an explicit gap signal and 65% include a timing note.",
+      "stats": [
+        {
+          "value": "100%",
+          "label": "rows with explicit gap signal",
+          "detail": "",
+          "note": "Useful for turning the list into a clear angle"
+        },
+        {
+          "value": "65%",
+          "label": "rows with timing signal",
+          "detail": "",
+          "note": "Rows that already explain why the window matters now"
+        }
+      ],
+      "chartRows": [
+        {
+          "value": "100",
+          "label": "Rows with signal evidence",
+          "detail": "",
+          "note": "How many rows already carry an explicit signal note"
+        },
+        {
+          "value": "100",
+          "label": "Rows with gap note",
+          "detail": "",
+          "note": "How many rows already expose the missing-tool or missing-motion angle"
+        },
+        {
+          "value": "65",
+          "label": "Rows with why-now note",
+          "detail": "",
+          "note": "How many rows already explain timing in the live sample"
+        }
+      ],
+      "sampleRows": [
+        {
+          "company": "The Haut Company",
+          "location": "Germany",
+          "signal": "Shopify store using Klaviyo for newsletters, no mention of SMS tools like Postscript/Attentive; skincare with repeat-purchase potential (serums, toners); recent 2026 activity",
+          "gap": "No mention of SMS tools like Postscript/Attentive",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "Xeno Naturkosmetik",
+          "location": "Germany",
+          "signal": "Shopify store (.myshopify.com) selling skincare for repeat purchase (serums, creams); newsletter signup visible as email stack; no SMS tools mentioned.",
+          "gap": "No SMS tools mentioned",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "Kosmetik Balance",
+          "location": "Germany",
+          "signal": "Shopify store (.myshopify.com) selling skincare products like serums and creams for replenishment; no Klaviyo/SMS visible but fits criteria partially.",
+          "gap": "No visible SMS tooling detected",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        },
+        {
+          "company": "GirlGotLashes",
+          "location": "Germany",
+          "signal": "Shopify brand using Klaviyo (confirmed in case study); repeat-purchase consumables like lash extensions/glue; no Postscript/Attentive mentioned.",
+          "gap": "No visible SMS tooling detected",
+          "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+        }
+      ]
+    },
+    {
+      "kind": "report",
+      "slug": "germany-meta-tiktok-gap",
+      "title": "German Shopify brands still underuse TikTok after proving Meta demand",
+      "summary": "A public research note on how often German Shopify brands appear active on Meta before showing any visible TikTok setup.",
+      "contextLine": "Updated from EnrichAnything market scans · live snapshot from March 23, 2026",
+      "marketSlug": "shopify-germany-meta-no-tiktok",
+      "marketUrl": "https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok",
+      "siteUrl": "https://www.enrichanything.com/reports/germany-meta-tiktok-gap",
+      "status": "collecting sample",
+      "live": false,
+      "dataSource": "collecting_sample",
+      "dataNote": "This note is still being prepared from the linked market scan.",
+      "rowCount": 12,
+      "lastSuccessAt": "2026-03-23T16:51:55.677+00:00",
+      "lastSuccessLabel": "March 23, 2026",
+      "lastStatus": "paused",
+      "citationText": "",
+      "stats": [],
+      "chartRows": [],
+      "sampleRows": [
+        {
+          "company": "BONNYBIRD",
+          "location": "Germany",
+          "signal": "Munich-based Shopify-like jewelry brand with high customer count indicating mid-market activity",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+        },
+        {
+          "company": "Tierliebhaber",
+          "location": "Germany",
+          "signal": "Listed in adspends top Meta advertisers Germany, pet brand",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+        },
+        {
+          "company": "Nø Cosmetics",
+          "location": "Germany",
+          "signal": "German Shopify cosmetics store with recent activity",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+        },
+        {
+          "company": "Lieblingsglas",
+          "location": "Germany",
+          "signal": "German kitchenware ecom site",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+        }
+      ]
+    },
+    {
+      "kind": "report",
+      "slug": "spain-meta-tiktok-gap",
+      "title": "Spanish Shopify brands still underuse TikTok after proving Meta demand",
+      "summary": "A public research note on how often spanish Shopify brands appear active on Meta before showing any visible TikTok setup.",
+      "contextLine": "Updated from EnrichAnything market scans · public sample, not a census",
+      "marketSlug": "shopify-spain-meta-no-tiktok",
+      "marketUrl": "https://www.enrichanything.com/markets/shopify-spain-meta-no-tiktok",
+      "siteUrl": "https://www.enrichanything.com/reports/spain-meta-tiktok-gap",
+      "status": "template only",
+      "live": false,
+      "dataSource": "template",
+      "dataNote": "This report note is being prepared from a source-backed market sample.",
+      "rowCount": 0,
+      "lastSuccessAt": "",
+      "lastSuccessLabel": "",
+      "lastStatus": "",
+      "citationText": "",
+      "stats": [],
+      "chartRows": [],
+      "sampleRows": []
+    },
+    {
+      "kind": "report",
+      "slug": "sweden-meta-tiktok-gap",
+      "title": "Swedish Shopify brands still underuse TikTok after proving Meta demand",
+      "summary": "A public research note on how often swedish Shopify brands appear active on Meta before showing any visible TikTok setup.",
+      "contextLine": "Updated from EnrichAnything market scans · public sample, not a census",
+      "marketSlug": "shopify-sweden-meta-no-tiktok",
+      "marketUrl": "https://www.enrichanything.com/markets/shopify-sweden-meta-no-tiktok",
+      "siteUrl": "https://www.enrichanything.com/reports/sweden-meta-tiktok-gap",
+      "status": "template only",
+      "live": false,
+      "dataSource": "template",
+      "dataNote": "The source list exists, but there are no published rows for this report yet.",
+      "rowCount": 0,
+      "lastSuccessAt": "2026-03-23T17:06:06.37+00:00",
+      "lastSuccessLabel": "March 23, 2026",
+      "lastStatus": "paused",
+      "citationText": "",
+      "stats": [],
+      "chartRows": [],
+      "sampleRows": []
+    },
+    {
+      "kind": "report",
+      "slug": "uk-meta-tiktok-gap",
+      "title": "UK Shopify brands still underuse TikTok after proving Meta demand",
+      "summary": "A public research note on how often uk Shopify brands appear active on Meta before showing any visible TikTok setup.",
+      "contextLine": "Updated from EnrichAnything market scans · live snapshot from March 23, 2026",
+      "marketSlug": "shopify-uk-meta-no-tiktok",
+      "marketUrl": "https://www.enrichanything.com/markets/shopify-uk-meta-no-tiktok",
+      "siteUrl": "https://www.enrichanything.com/reports/uk-meta-tiktok-gap",
+      "status": "live",
+      "live": true,
+      "dataSource": "collected_sample",
+      "dataNote": "Built from the latest published EnrichAnything market scan.",
+      "rowCount": 22,
+      "lastSuccessAt": "2026-03-23T17:05:16.253+00:00",
+      "lastSuccessLabel": "March 23, 2026",
+      "lastStatus": "paused",
+      "citationText": "Based on EnrichAnything's latest scan of matching brands, 100% already include an explicit gap signal and 100% include a timing note.",
+      "stats": [
+        {
+          "value": "100%",
+          "label": "rows with explicit gap signal",
+          "detail": "",
+          "note": "Useful for turning the list into a clear angle"
+        },
+        {
+          "value": "100%",
+          "label": "rows with timing signal",
+          "detail": "",
+          "note": "Rows that already explain why the window matters now"
+        }
+      ],
+      "chartRows": [
+        {
+          "value": "100",
+          "label": "Rows with signal evidence",
+          "detail": "",
+          "note": "How many rows already carry an explicit signal note"
+        },
+        {
+          "value": "100",
+          "label": "Rows with gap note",
+          "detail": "",
+          "note": "How many rows already expose the missing-tool or missing-motion angle"
+        },
+        {
+          "value": "100",
+          "label": "Rows with why-now note",
+          "detail": "",
+          "note": "How many rows already explain timing in the live sample"
+        }
+      ],
+      "sampleRows": [
+        {
+          "company": "Marks and Spencer",
+          "location": "UK",
+          "signal": "Top Meta advertiser in UK with 940 ads, 2.2B views, $33.1M spend indicating active ecommerce advertising on Meta",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+        },
+        {
+          "company": "ASOS",
+          "location": "UK",
+          "signal": "Top Meta advertiser in UK with 490 ads, 853.5M views, $12.8M spend",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+        },
+        {
+          "company": "Gymshark",
+          "location": "UK",
+          "signal": "Top Meta advertiser in UK with 287 ads, 257.8M views, $3.9M spend; active ad library with high impressions",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+        },
+        {
+          "company": "Nutrition Geeks",
+          "location": "UK",
+          "signal": "Top Meta advertiser in UK with 782 ads, 1.2B views, $17.9M spend",
+          "gap": "No visible TikTok setup detected",
+          "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
+        }
+      ]
+    }
+  ]
+}

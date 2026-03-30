@@ -1,0 +1,22 @@
+{
+  "kind": "report",
+  "slug": "spain-meta-tiktok-gap",
+  "title": "Spanish Shopify brands still underuse TikTok after proving Meta demand",
+  "summary": "A public research note on how often spanish Shopify brands appear active on Meta before showing any visible TikTok setup.",
+  "contextLine": "Updated from EnrichAnything market scans · public sample, not a census",
+  "marketSlug": "shopify-spain-meta-no-tiktok",
+  "marketUrl": "https://www.enrichanything.com/markets/shopify-spain-meta-no-tiktok",
+  "siteUrl": "https://www.enrichanything.com/reports/spain-meta-tiktok-gap",
+  "status": "template only",
+  "live": false,
+  "dataSource": "template",
+  "dataNote": "This report note is being prepared from a source-backed market sample.",
+  "rowCount": 0,
+  "lastSuccessAt": "",
+  "lastSuccessLabel": "",
+  "lastStatus": "",
+  "citationText": "",
+  "stats": [],
+  "chartRows": [],
+  "sampleRows": []
+}

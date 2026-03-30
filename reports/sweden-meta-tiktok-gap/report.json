@@ -1,0 +1,22 @@
+{
+  "kind": "report",
+  "slug": "sweden-meta-tiktok-gap",
+  "title": "Swedish Shopify brands still underuse TikTok after proving Meta demand",
+  "summary": "A public research note on how often swedish Shopify brands appear active on Meta before showing any visible TikTok setup.",
+  "contextLine": "Updated from EnrichAnything market scans · public sample, not a census",
+  "marketSlug": "shopify-sweden-meta-no-tiktok",
+  "marketUrl": "https://www.enrichanything.com/markets/shopify-sweden-meta-no-tiktok",
+  "siteUrl": "https://www.enrichanything.com/reports/sweden-meta-tiktok-gap",
+  "status": "template only",
+  "live": false,
+  "dataSource": "template",
+  "dataNote": "The source list exists, but there are no published rows for this report yet.",
+  "rowCount": 0,
+  "lastSuccessAt": "2026-03-23T17:06:06.37+00:00",
+  "lastSuccessLabel": "March 23, 2026",
+  "lastStatus": "paused",
+  "citationText": "",
+  "stats": [],
+  "chartRows": [],
+  "sampleRows": []
+}

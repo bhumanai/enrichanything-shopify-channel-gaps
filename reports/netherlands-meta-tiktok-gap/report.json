@@ -1,0 +1,22 @@
+{
+  "kind": "report",
+  "slug": "netherlands-meta-tiktok-gap",
+  "title": "Dutch Shopify brands still underuse TikTok after proving Meta demand",
+  "summary": "A public research note on how often dutch Shopify brands appear active on Meta before showing any visible TikTok setup.",
+  "contextLine": "Updated from EnrichAnything market scans · public sample, not a census",
+  "marketSlug": "shopify-netherlands-meta-no-tiktok",
+  "marketUrl": "https://www.enrichanything.com/markets/shopify-netherlands-meta-no-tiktok",
+  "siteUrl": "https://www.enrichanything.com/reports/netherlands-meta-tiktok-gap",
+  "status": "template only",
+  "live": false,
+  "dataSource": "template",
+  "dataNote": "This report note is being prepared from a source-backed market sample.",
+  "rowCount": 0,
+  "lastSuccessAt": "",
+  "lastSuccessLabel": "",
+  "lastStatus": "",
+  "citationText": "",
+  "stats": [],
+  "chartRows": [],
+  "sampleRows": []
+}

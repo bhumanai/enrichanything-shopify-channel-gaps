@@ -1,0 +1,83 @@
+{
+  "kind": "report",
+  "slug": "france-klaviyo-sms-gap",
+  "title": "French Shopify brands still leave SMS out of an otherwise mature Klaviyo stack",
+  "summary": "A public research note on how often french Shopify brands appear to use Klaviyo email without a visible SMS layer.",
+  "contextLine": "Updated from EnrichAnything market scans · live snapshot from March 27, 2026",
+  "marketSlug": "shopify-france-klaviyo-no-sms",
+  "marketUrl": "https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms",
+  "siteUrl": "https://www.enrichanything.com/reports/france-klaviyo-sms-gap",
+  "status": "live",
+  "live": true,
+  "dataSource": "collected_sample",
+  "dataNote": "Built from the latest published EnrichAnything market scan.",
+  "rowCount": 20,
+  "lastSuccessAt": "2026-03-27T05:41:48.798+00:00",
+  "lastSuccessLabel": "March 27, 2026",
+  "lastStatus": "paused",
+  "citationText": "Based on EnrichAnything's latest scan of matching brands, 100% already include an explicit gap signal and 60% include a timing note.",
+  "stats": [
+    {
+      "value": "100%",
+      "label": "rows with explicit gap signal",
+      "detail": "",
+      "note": "Useful for turning the list into a clear angle"
+    },
+    {
+      "value": "60%",
+      "label": "rows with timing signal",
+      "detail": "",
+      "note": "Rows that already explain why the window matters now"
+    }
+  ],
+  "chartRows": [
+    {
+      "value": "100",
+      "label": "Rows with signal evidence",
+      "detail": "",
+      "note": "How many rows already carry an explicit signal note"
+    },
+    {
+      "value": "100",
+      "label": "Rows with gap note",
+      "detail": "",
+      "note": "How many rows already expose the missing-tool or missing-motion angle"
+    },
+    {
+      "value": "60",
+      "label": "Rows with why-now note",
+      "detail": "",
+      "note": "How many rows already explain timing in the live sample"
+    }
+  ],
+  "sampleRows": [
+    {
+      "company": "La Crique",
+      "location": "France",
+      "signal": "Shopify brand (confirmed), French-made beauty brand with recent reviews in March 2026 but no evidence of Klaviyo/email stack or SMS tooling visible",
+      "gap": "No evidence of Klaviyo/email stack or SMS tooling visible",
+      "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+    },
+    {
+      "company": "Le Slip Français",
+      "location": "France",
+      "signal": "Shopify Plus store using Klaviyo for CRM/email; no SMS tools mentioned; French brand",
+      "gap": "No SMS tools mentioned",
+      "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+    },
+    {
+      "company": "Maison Fauve",
+      "location": "France",
+      "signal": "French brand with recent Spring 2026 collection launch Mar 19 (within priority window), likely Shopify given context but Klaviyo/SMS unconfirmed",
+      "gap": "No visible SMS tooling detected",
+      "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+    },
+    {
+      "company": "Mieux Que Des Fleurs",
+      "location": "France",
+      "signal": "Shopify brand using Klaviyo email stack; no SMS tooling mentioned",
+      "gap": "No SMS tooling mentioned",
+      "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
+    }
+  ]
+}

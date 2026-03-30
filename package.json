@@ -1,0 +1,8 @@
+{
+  "name": "enrichanything-shopify-channel-gaps",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "refresh": "node scripts/refresh.js"
+  }
+}

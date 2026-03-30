@@ -1,0 +1,51 @@
+{
+  "kind": "report",
+  "slug": "germany-meta-tiktok-gap",
+  "title": "German Shopify brands still underuse TikTok after proving Meta demand",
+  "summary": "A public research note on how often German Shopify brands appear active on Meta before showing any visible TikTok setup.",
+  "contextLine": "Updated from EnrichAnything market scans · live snapshot from March 23, 2026",
+  "marketSlug": "shopify-germany-meta-no-tiktok",
+  "marketUrl": "https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok",
+  "siteUrl": "https://www.enrichanything.com/reports/germany-meta-tiktok-gap",
+  "status": "collecting sample",
+  "live": false,
+  "dataSource": "collecting_sample",
+  "dataNote": "This note is still being prepared from the linked market scan.",
+  "rowCount": 12,
+  "lastSuccessAt": "2026-03-23T16:51:55.677+00:00",
+  "lastSuccessLabel": "March 23, 2026",
+  "lastStatus": "paused",
+  "citationText": "",
+  "stats": [],
+  "chartRows": [],
+  "sampleRows": [
+    {
+      "company": "BONNYBIRD",
+      "location": "Germany",
+      "signal": "Munich-based Shopify-like jewelry brand with high customer count indicating mid-market activity",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+    },
+    {
+      "company": "Tierliebhaber",
+      "location": "Germany",
+      "signal": "Listed in adspends top Meta advertisers Germany, pet brand",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+    },
+    {
+      "company": "Nø Cosmetics",
+      "location": "Germany",
+      "signal": "German Shopify cosmetics store with recent activity",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+    },
+    {
+      "company": "Lieblingsglas",
+      "location": "Germany",
+      "signal": "German kitchenware ecom site",
+      "gap": "No visible TikTok setup detected",
+      "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
+    }
+  ]
+}
