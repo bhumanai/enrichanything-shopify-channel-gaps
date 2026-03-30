@@ -5,7 +5,7 @@
   "theme": "Useful if you sell TikTok ads, SMS, or lifecycle work to ecommerce brands.",
   "accentColor": "#0f766e",
   "siteOrigin": "https://www.enrichanything.com",
-  "generatedAt": "2026-03-30T11:52:09.204Z",
+  "generatedAt": "2026-03-30T13:28:06.691Z",
   "topics": [
     "shopify",
     "ecommerce",
@@ -1266,6 +1266,10 @@
     }
   ],
   "trackedHomeUrl": "https://www.enrichanything.com/?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=repo-home",
+  "socialImagePath": "assets/social-preview.png",
+  "socialImageSvgPath": "assets/social-preview.svg",
+  "socialImageUrl": "https://bhumanai.github.io/enrichanything-shopify-channel-gaps/assets/social-preview.png",
+  "socialImageSvgUrl": "https://bhumanai.github.io/enrichanything-shopify-channel-gaps/assets/social-preview.svg",
   "featuredMarketTitle": "Shopify brands in the UK running Meta ads but not TikTok",
   "featuredMarketUrl": "https://www.enrichanything.com/markets/shopify-uk-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-uk-meta-no-tiktok",
   "featuredReportSlug": "uk-meta-tiktok-gap",

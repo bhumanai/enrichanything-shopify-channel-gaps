@@ -1,5 +1,7 @@
 # Shopify Brands Missing TikTok or SMS
 
+![Shopify Brands Missing TikTok or SMS](assets/social-preview.png)
+
 Lists of Shopify brands already spending on Meta or email, but still missing the next obvious channel.
 
 Useful if you sell TikTok ads, SMS, or lifecycle work to ecommerce brands.

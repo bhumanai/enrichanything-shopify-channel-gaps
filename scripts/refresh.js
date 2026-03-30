@@ -179,6 +179,10 @@ function decorateRepoConfig(config = {}) {
   return {
     ...config,
     trackedHomeUrl,
+    socialImagePath: "assets/social-preview.png",
+    socialImageSvgPath: "assets/social-preview.svg",
+    socialImageUrl: buildAssetUrl(config.pagesUrl, "assets/social-preview.png"),
+    socialImageSvgUrl: buildAssetUrl(config.pagesUrl, "assets/social-preview.svg"),
     markets: finalMarkets,
     reports,
     featuredMarketSlug: featuredMarket?.slug || "",
@@ -263,6 +267,8 @@ function renderRepoReadme(config = {}) {
 
   const lines = [
     `# ${config.title}`,
+    "",
+    config.socialImagePath ? `![${config.title}](${config.socialImagePath})` : null,
     "",
     config.summary,
     "",
@@ -622,6 +628,15 @@ function renderLandingPage(config = {}) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(config.title)}</title>
     <meta name="description" content="${escapeHtml(config.summary)}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="${escapeHtml(config.title)}">
+    <meta property="og:description" content="${escapeHtml(config.summary)}">
+    ${config.pagesUrl ? `<meta property="og:url" content="${escapeHtml(config.pagesUrl)}">` : ""}
+    ${config.socialImageUrl ? `<meta property="og:image" content="${escapeHtml(config.socialImageUrl)}">` : ""}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${escapeHtml(config.title)}">
+    <meta name="twitter:description" content="${escapeHtml(config.summary)}">
+    ${config.socialImageUrl ? `<meta name="twitter:image" content="${escapeHtml(config.socialImageUrl)}">` : ""}
     <style>
       :root {
         --bg: #f5f0e8;
@@ -1203,6 +1218,21 @@ function buildTrackedUrl(baseUrl = "", { source = "github", medium = "public_rep
     return url.toString();
   } catch {
     return rawValue;
+  }
+}
+
+function buildAssetUrl(baseUrl = "", assetPath = "") {
+  const rawBase = String(baseUrl || "").trim();
+  const rawAsset = String(assetPath || "").trim().replace(/^\/+/, "");
+
+  if (!rawBase || !rawAsset) {
+    return "";
+  }
+
+  try {
+    return new URL(rawAsset, rawBase.endsWith("/") ? rawBase : `${rawBase}/`).toString();
+  } catch {
+    return "";
   }
 }
 
