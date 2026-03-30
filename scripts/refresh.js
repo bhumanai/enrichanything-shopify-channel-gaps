@@ -12,11 +12,6 @@ for (const market of config.markets || []) {
   const payload = await fetchJson(new URL("/api/public-market", config.siteOrigin), market.slug);
   const merged = mergeMarket(market, payload);
   refreshedMarkets.push(merged);
-
-  const targetDir = path.join(ROOT, "markets", merged.slug);
-  await fs.mkdir(targetDir, { recursive: true });
-  await writeText(path.join(targetDir, "README.md"), renderMarketReadme(merged));
-  await writeJson(path.join(targetDir, "market.json"), merged);
 }
 
 const refreshedReports = [];
@@ -24,19 +19,28 @@ for (const report of config.reports || []) {
   const payload = await fetchJson(new URL("/api/public-report", config.siteOrigin), report.slug);
   const merged = mergeReport(report, payload);
   refreshedReports.push(merged);
-
-  const targetDir = path.join(ROOT, "reports", merged.slug);
-  await fs.mkdir(targetDir, { recursive: true });
-  await writeText(path.join(targetDir, "README.md"), renderReportReadme(merged));
-  await writeJson(path.join(targetDir, "report.json"), merged);
 }
 
-const nextConfig = {
+const nextConfig = decorateRepoConfig({
   ...config,
   generatedAt,
   markets: refreshedMarkets,
   reports: refreshedReports,
-};
+});
+
+for (const market of nextConfig.markets || []) {
+  const targetDir = path.join(ROOT, "markets", market.slug);
+  await fs.mkdir(targetDir, { recursive: true });
+  await writeText(path.join(targetDir, "README.md"), renderMarketReadme(market));
+  await writeJson(path.join(targetDir, "market.json"), market);
+}
+
+for (const report of nextConfig.reports || []) {
+  const targetDir = path.join(ROOT, "reports", report.slug);
+  await fs.mkdir(targetDir, { recursive: true });
+  await writeText(path.join(targetDir, "README.md"), renderReportReadme(report));
+  await writeJson(path.join(targetDir, "report.json"), report);
+}
 
 await writeJson(path.join(ROOT, "repo.config.json"), nextConfig);
 await writeJson(path.join(ROOT, "data", "catalog.json"), {
@@ -44,18 +48,20 @@ await writeJson(path.join(ROOT, "data", "catalog.json"), {
   title: nextConfig.title,
   summary: nextConfig.summary,
   topics: nextConfig.topics,
-  markets: refreshedMarkets,
-  reports: refreshedReports,
+  markets: nextConfig.markets,
+  reports: nextConfig.reports,
 });
 await writeText(path.join(ROOT, "README.md"), renderRepoReadme(nextConfig));
+await writeText(path.join(ROOT, "index.html"), renderLandingPage(nextConfig));
+await writeText(path.join(ROOT, ".nojekyll"), "");
 
 console.log(
   JSON.stringify({
     action: "refreshed_public_repo_assets",
-    repo: config.name,
+    repo: nextConfig.name,
     generatedAt,
-    markets: refreshedMarkets.length,
-    reports: refreshedReports.length,
+    markets: nextConfig.markets.length,
+    reports: nextConfig.reports.length,
   }),
 );
 
@@ -118,11 +124,142 @@ function mergeReport(previous, payload) {
   };
 }
 
+function decorateRepoConfig(config = {}) {
+  const campaign = String(config.name || "enrichanything-public-repo").trim();
+  const trackedHomeUrl = buildTrackedUrl(config.siteOrigin, {
+    campaign,
+    content: "repo-home",
+  });
+
+  const draftReports = Array.isArray(config.reports)
+    ? config.reports.map((report) => decorateReport({ report, campaign, repoUrl: config.repoUrl }))
+    : [];
+  const reportBySlug = new Map(draftReports.map((report) => [report.slug, report]));
+
+  const markets = Array.isArray(config.markets)
+    ? config.markets.map((market) =>
+        decorateMarket({
+          market,
+          campaign,
+          repoUrl: config.repoUrl,
+          reportBySlug,
+        }),
+      )
+    : [];
+
+  const marketBySlug = new Map(markets.map((market) => [market.slug, market]));
+  const reports = draftReports.map((report) => ({
+    ...report,
+    trackedMarketUrl:
+      buildTrackedUrl(report.marketUrl || marketBySlug.get(report.marketSlug)?.siteUrl || "", {
+        campaign,
+        content: `report-${report.slug}-market`,
+      }) ||
+      marketBySlug.get(report.marketSlug)?.trackedSiteUrl ||
+      "",
+  }));
+
+  const finalReportBySlug = new Map(reports.map((report) => [report.slug, report]));
+  const finalMarkets = markets.map((market) => ({
+    ...market,
+    trackedReportUrl:
+      buildTrackedUrl(market.reportUrl || finalReportBySlug.get(market.reportSlug)?.siteUrl || "", {
+        campaign,
+        content: `market-${market.slug}-report`,
+      }) || "",
+  }));
+
+  const finalMarketBySlug = new Map(finalMarkets.map((market) => [market.slug, market]));
+  const featuredMarket = pickPreferredRecord(finalMarkets, config.featuredMarketSlug);
+  const featuredReport = pickPreferredRecord(
+    reports,
+    featuredMarket?.reportSlug || config.featuredReportSlug,
+  );
+
+  return {
+    ...config,
+    trackedHomeUrl,
+    markets: finalMarkets,
+    reports,
+    featuredMarketSlug: featuredMarket?.slug || "",
+    featuredMarketTitle: featuredMarket?.title || "",
+    featuredMarketUrl: featuredMarket?.trackedSiteUrl || trackedHomeUrl,
+    featuredReportSlug: featuredReport?.slug || "",
+    featuredReportTitle: featuredReport?.title || "",
+    featuredReportUrl: featuredReport?.trackedSiteUrl || trackedHomeUrl,
+    buyerPlaybooks: Array.isArray(config.buyerPlaybooks)
+      ? config.buyerPlaybooks.map((playbook) =>
+          decoratePlaybook({
+            playbook,
+            marketBySlug: finalMarketBySlug,
+            trackedHomeUrl,
+          }),
+        )
+      : [],
+  };
+}
+
+function decorateMarket({ market = {}, campaign = "", repoUrl = "", reportBySlug = new Map() } = {}) {
+  const slug = String(market.slug || "").trim();
+  const reportSlug = String(market.reportSlug || "").trim();
+  const relatedReport = reportBySlug.get(reportSlug);
+
+  return {
+    ...market,
+    slug,
+    reportSlug,
+    repoReadmePath: slug ? `markets/${slug}/README.md` : "",
+    githubReadmeUrl: slug && repoUrl ? `${repoUrl}/blob/main/markets/${slug}/README.md` : "",
+    trackedSiteUrl: buildTrackedUrl(market.siteUrl, {
+      campaign,
+      content: `market-${slug}`,
+    }),
+    trackedReportUrl: buildTrackedUrl(market.reportUrl || relatedReport?.siteUrl || "", {
+      campaign,
+      content: `market-${slug}-report`,
+    }),
+  };
+}
+
+function decorateReport({ report = {}, campaign = "", repoUrl = "" } = {}) {
+  const slug = String(report.slug || "").trim();
+  const marketSlug = String(report.marketSlug || "").trim();
+
+  return {
+    ...report,
+    slug,
+    marketSlug,
+    repoReadmePath: slug ? `reports/${slug}/README.md` : "",
+    githubReadmeUrl: slug && repoUrl ? `${repoUrl}/blob/main/reports/${slug}/README.md` : "",
+    trackedSiteUrl: buildTrackedUrl(report.siteUrl, {
+      campaign,
+      content: `report-${slug}`,
+    }),
+    trackedMarketUrl: "",
+  };
+}
+
+function decoratePlaybook({ playbook = {}, marketBySlug = new Map(), trackedHomeUrl = "" } = {}) {
+  const startSlug = String(playbook.startSlug || "").trim();
+  const market = marketBySlug.get(startSlug);
+
+  return {
+    role: String(playbook.role || "").trim(),
+    pitch: String(playbook.pitch || "").trim(),
+    startSlug,
+    startTitle: market?.title || "",
+    startStatus: market?.status || "",
+    startUrl: market?.trackedSiteUrl || trackedHomeUrl,
+    startReadmePath: market?.repoReadmePath || "",
+  };
+}
+
 function renderRepoReadme(config = {}) {
-  const activeMarkets = (config.markets || []).filter((market) => market.status !== "template only");
-  const pipelineMarkets = (config.markets || []).filter((market) => market.status === "template only");
-  const activeReports = (config.reports || []).filter((report) => report.status !== "template only");
-  const pipelineReports = (config.reports || []).filter((report) => report.status === "template only");
+  const activeMarkets = getActiveRecords(config.markets);
+  const pipelineMarkets = getPipelineRecords(config.markets);
+  const activeReports = getActiveRecords(config.reports);
+  const pipelineReports = getPipelineRecords(config.reports);
+  const featuredMarket = pickPreferredRecord(config.markets, config.featuredMarketSlug);
 
   const lines = [
     `# ${config.title}`,
@@ -131,34 +268,46 @@ function renderRepoReadme(config = {}) {
     "",
     config.theme,
     "",
+    "## Start here",
+    "",
+    featuredMarket
+      ? `- Fastest first click: [${featuredMarket.title}](${featuredMarket.trackedSiteUrl || featuredMarket.siteUrl}) (${featuredMarket.status})`
+      : `- Open EnrichAnything: [Build from the main site](${config.trackedHomeUrl || config.siteOrigin})`,
+    config.pagesUrl ? `- Cleaner web version: [${config.pagesUrl}](${config.pagesUrl})` : null,
+    `- Full product: [EnrichAnything](${config.trackedHomeUrl || config.siteOrigin})`,
+    "",
     `- Source product: ${config.siteOrigin}`,
-    `- Generated from EnrichAnything public assets: ${formatDate(config.generatedAt) || config.generatedAt}`,
+    config.repoUrl ? `- GitHub repo: ${config.repoUrl}` : null,
+    `- Last refresh: ${formatDate(config.generatedAt) || config.generatedAt}`,
     "- Refresh command: `npm run refresh`",
     "",
-    "## What you'll find here",
+    "## Use this repo if...",
     "",
-    "These are public examples from EnrichAnything. You can browse the lists, see why a company matched, and click through if you want the full table or want to build your own version.",
+    ...renderPlaybookMarkdown(config.buyerPlaybooks),
+  ].filter((line) => line !== null);
+
+  lines.push(
     "",
-    "## Live lists",
+    "## Lists you can use now",
     "",
-    "| Market | Status | Rows | Page |",
+    "| List | Status | Rows | Open |",
     "| --- | --- | ---: | --- |",
     ...activeMarkets.map(
       (market) =>
-        `| [${escapeTable(market.title)}](markets/${market.slug}/README.md) | ${escapeTable(market.status)} | ${market.rowCount} | [Live page](${market.siteUrl}) |`,
+        `| [${escapeTable(market.title)}](${market.repoReadmePath}) | ${escapeTable(market.status)} | ${formatRowCount(market.rowCount)} | [Open in EnrichAnything](${market.trackedSiteUrl || market.siteUrl}) |`,
     ),
     "",
-  ];
+  );
 
   if (activeReports.length) {
     lines.push(
-      "## Notes built from those lists",
+      "## Notes that explain the market",
       "",
-      "| Report | Status | Rows | Page |",
+      "| Note | Status | Rows | Open |",
       "| --- | --- | ---: | --- |",
       ...activeReports.map(
         (report) =>
-          `| [${escapeTable(report.title)}](reports/${report.slug}/README.md) | ${escapeTable(report.status)} | ${report.rowCount} | [Live page](${report.siteUrl}) |`,
+          `| [${escapeTable(report.title)}](${report.repoReadmePath}) | ${escapeTable(report.status)} | ${formatRowCount(report.rowCount)} | [Open in EnrichAnything](${report.trackedSiteUrl || report.siteUrl}) |`,
       ),
       "",
     );
@@ -166,15 +315,15 @@ function renderRepoReadme(config = {}) {
 
   if (pipelineMarkets.length) {
     lines.push(
-      "## Coming next",
+      "## Still queued up",
       "",
-      "These list ideas already exist in EnrichAnything, but the public sample is not live yet.",
+      "These list ideas exist already, but the public sample is not ready yet.",
       "",
-      "| Market | Status | Page |",
-      "| --- | --- | --- |",
+      "| List | Status |",
+      "| --- | --- |",
       ...pipelineMarkets.map(
         (market) =>
-          `| [${escapeTable(market.title)}](markets/${market.slug}/README.md) | ${escapeTable(market.status)} | [Live page](${market.siteUrl}) |`,
+          `| [${escapeTable(market.title)}](${market.repoReadmePath}) | ${escapeTable(market.status)} |`,
       ),
       "",
     );
@@ -182,22 +331,22 @@ function renderRepoReadme(config = {}) {
 
   if (pipelineReports.length) {
     lines.push(
-      "## Notes coming next",
+      "## Notes still queued up",
       "",
-      "| Report | Status | Page |",
-      "| --- | --- | --- |",
+      "| Note | Status |",
+      "| --- | --- |",
       ...pipelineReports.map(
         (report) =>
-          `| [${escapeTable(report.title)}](reports/${report.slug}/README.md) | ${escapeTable(report.status)} | [Live page](${report.siteUrl}) |`,
+          `| [${escapeTable(report.title)}](${report.repoReadmePath}) | ${escapeTable(report.status)} |`,
       ),
       "",
     );
   }
 
   lines.push(
-    "## Want more than the sample?",
+    "## Need a custom cut?",
     "",
-    "Open any list in EnrichAnything if you want the full table, more columns, or a custom version for your niche.",
+    `Open [EnrichAnything](${config.trackedHomeUrl || config.siteOrigin}) if you want more columns, a fresh export, or the same pattern for a different niche.`,
     "",
   );
 
@@ -210,8 +359,14 @@ function renderMarketReadme(record = {}) {
     "",
     record.summary || "Public company list from EnrichAnything.",
     "",
-    `- Page: ${record.siteUrl}`,
-    record.reportUrl ? `- Related note: ${record.reportUrl}` : null,
+    record.trackedSiteUrl
+      ? `- Open in EnrichAnything: [See the live list](${record.trackedSiteUrl})`
+      : `- Page: ${record.siteUrl}`,
+    record.trackedReportUrl
+      ? `- Related note: [Read the matching note](${record.trackedReportUrl})`
+      : record.reportUrl
+        ? `- Related note: ${record.reportUrl}`
+        : null,
     record.audience ? `- Useful for: ${record.audience}` : null,
     `- Status: ${record.status}`,
     record.lastSuccessLabel ? `- Last checked: ${record.lastSuccessLabel}` : null,
@@ -301,7 +456,9 @@ function renderMarketReadme(record = {}) {
     lines.push(record.ctaNote, "");
   }
   lines.push(
-    `Open this list in EnrichAnything if you want the full table, extra columns, or a version for a different niche: ${record.siteUrl}`,
+    record.trackedSiteUrl
+      ? `Open [the live list in EnrichAnything](${record.trackedSiteUrl}) if you want the full table, extra columns, or the same search for a different niche.`
+      : `Open this list in EnrichAnything if you want the full table, extra columns, or a version for a different niche: ${record.siteUrl}`,
     "",
   );
 
@@ -314,8 +471,14 @@ function renderReportReadme(record = {}) {
     "",
     record.summary || "Public note from EnrichAnything.",
     "",
-    `- Page: ${record.siteUrl}`,
-    record.marketUrl ? `- Related list: ${record.marketUrl}` : null,
+    record.trackedSiteUrl
+      ? `- Open in EnrichAnything: [See the note](${record.trackedSiteUrl})`
+      : `- Page: ${record.siteUrl}`,
+    record.trackedMarketUrl
+      ? `- Related list: [Open the linked list](${record.trackedMarketUrl})`
+      : record.marketUrl
+        ? `- Related list: ${record.marketUrl}`
+        : null,
     `- Status: ${record.status}`,
     record.contextLine ? `- Context: ${record.contextLine}` : null,
     record.lastSuccessLabel ? `- Last checked: ${record.lastSuccessLabel}` : null,
@@ -370,11 +533,447 @@ function renderReportReadme(record = {}) {
 
   lines.push("## Want the full list?", "");
   lines.push(
-    `Open the related list in EnrichAnything if you want to inspect rows, add columns, or build your own version: ${record.siteUrl}`,
+    record.trackedMarketUrl
+      ? `Open the [related list in EnrichAnything](${record.trackedMarketUrl}) if you want rows, more columns, or a version for your own segment.`
+      : `Open the related list in EnrichAnything if you want to inspect rows, add columns, or build your own version: ${record.siteUrl}`,
     "",
   );
 
   return lines.join("\n");
+}
+
+function renderLandingPage(config = {}) {
+  const accentColor = sanitizeColor(config.accentColor, "#0f766e");
+  const activeMarkets = getActiveRecords(config.markets);
+  const activeReports = getActiveRecords(config.reports);
+  const pipelineMarkets = getPipelineRecords(config.markets);
+  const pipelineReports = getPipelineRecords(config.reports);
+  const featuredMarket = pickPreferredRecord(config.markets, config.featuredMarketSlug);
+
+  const playbookCards = Array.isArray(config.buyerPlaybooks)
+    ? config.buyerPlaybooks
+        .map((playbook) => {
+          const startLine =
+            playbook.startTitle && playbook.startUrl
+              ? `<p class="card-link"><a href="${escapeHtml(playbook.startUrl)}">Start with ${escapeHtml(playbook.startTitle)}</a>${playbook.startStatus ? ` <span>${escapeHtml(playbook.startStatus)}</span>` : ""}</p>`
+              : "";
+
+          return [
+            '<article class="card playbook-card">',
+            `<p class="eyebrow">${escapeHtml(playbook.role)}</p>`,
+            `<p class="card-copy">${escapeHtml(playbook.pitch)}</p>`,
+            startLine,
+            "</article>",
+          ].join("");
+        })
+        .join("")
+    : "";
+
+  const marketCards = activeMarkets
+    .map((market) =>
+      [
+        '<article class="card list-card">',
+        `<p class="card-status">${escapeHtml(market.status)}</p>`,
+        `<h3>${escapeHtml(market.title)}</h3>`,
+        `<p class="card-copy">${escapeHtml(market.summary || "Public list from EnrichAnything.")}</p>`,
+        `<p class="card-meta">${formatRowCount(market.rowCount)} rows${market.audience ? ` · ${escapeHtml(market.audience)}` : ""}</p>`,
+        '<div class="card-actions">',
+        market.githubReadmeUrl
+          ? `<a class="ghost" href="${escapeHtml(market.githubReadmeUrl)}">Read details</a>`
+          : "",
+        `<a class="button" href="${escapeHtml(market.trackedSiteUrl || market.siteUrl)}">Open list</a>`,
+        "</div>",
+        "</article>",
+      ].join(""),
+    )
+    .join("");
+
+  const reportCards = activeReports
+    .map((report) =>
+      [
+        '<article class="card list-card">',
+        `<p class="card-status">${escapeHtml(report.status)}</p>`,
+        `<h3>${escapeHtml(report.title)}</h3>`,
+        `<p class="card-copy">${escapeHtml(report.summary || "Public note from EnrichAnything.")}</p>`,
+        `<p class="card-meta">${formatRowCount(report.rowCount)} rows${report.contextLine ? ` · ${escapeHtml(report.contextLine)}` : ""}</p>`,
+        '<div class="card-actions">',
+        report.githubReadmeUrl
+          ? `<a class="ghost" href="${escapeHtml(report.githubReadmeUrl)}">Read details</a>`
+          : "",
+        `<a class="button" href="${escapeHtml(report.trackedSiteUrl || report.siteUrl)}">Open note</a>`,
+        "</div>",
+        "</article>",
+      ].join(""),
+    )
+    .join("");
+
+  const queuedCards = [...pipelineMarkets, ...pipelineReports]
+    .slice(0, 8)
+    .map(
+      (record) =>
+        `<article class="queued-item"><strong>${escapeHtml(record.title)}</strong><span>${escapeHtml(record.status)}</span></article>`,
+    )
+    .join("");
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${escapeHtml(config.title)}</title>
+    <meta name="description" content="${escapeHtml(config.summary)}">
+    <style>
+      :root {
+        --bg: #f5f0e8;
+        --surface: rgba(255, 251, 245, 0.94);
+        --surface-strong: #fffdf8;
+        --ink: #1c1712;
+        --muted: #62584e;
+        --border: rgba(28, 23, 18, 0.12);
+        --accent: ${accentColor};
+        --shadow: 0 24px 60px rgba(33, 25, 18, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 30rem),
+          linear-gradient(180deg, #f7f2ea 0%, #efe6da 100%);
+        color: var(--ink);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 32px 20px 72px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 32px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .topbar-links {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding: 40px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 12px;
+        font-size: clamp(2.3rem, 5vw, 4.4rem);
+        line-height: 0.96;
+        max-width: 14ch;
+      }
+
+      .lede {
+        max-width: 44rem;
+        margin-bottom: 10px;
+        font-size: 1.12rem;
+        line-height: 1.6;
+      }
+
+      .sublede {
+        max-width: 42rem;
+        margin-bottom: 24px;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .hero-stats,
+      .card-actions,
+      .topbar-links,
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .stat {
+        padding: 10px 14px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--surface-strong);
+        font-size: 0.92rem;
+      }
+
+      .hero-actions {
+        margin-top: 24px;
+      }
+
+      .button,
+      .ghost {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 16px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .button {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+      }
+
+      .ghost {
+        background: var(--surface-strong);
+        color: var(--ink);
+      }
+
+      .section {
+        margin-top: 36px;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: flex-end;
+        margin-bottom: 16px;
+      }
+
+      .section-head p {
+        color: var(--muted);
+        max-width: 40rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        padding: 22px;
+        border-radius: 22px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+      }
+
+      .playbook-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 249, 242, 0.95));
+      }
+
+      .list-card h3 {
+        margin-bottom: 10px;
+        font-size: 1.18rem;
+        line-height: 1.2;
+      }
+
+      .card-copy,
+      .card-meta,
+      .card-link,
+      .queued-item span {
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .card-status {
+        margin-bottom: 12px;
+        color: var(--accent);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.76rem;
+      }
+
+      .queued-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 12px;
+      }
+
+      .queued-item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.6);
+      }
+
+      footer {
+        margin-top: 42px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 720px) {
+        .shell {
+          padding: 20px 14px 52px;
+        }
+
+        .hero {
+          padding: 24px;
+          border-radius: 22px;
+        }
+
+        .topbar,
+        .section-head {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="topbar">
+        <strong>EnrichAnything public repo</strong>
+        <div class="topbar-links">
+          ${config.repoUrl ? `<a href="${escapeHtml(config.repoUrl)}">GitHub repo</a>` : ""}
+          <a href="${escapeHtml(config.trackedHomeUrl || config.siteOrigin)}">Main site</a>
+        </div>
+      </div>
+
+      <section class="hero">
+        <p class="eyebrow">Source-backed prospect lists</p>
+        <h1>${escapeHtml(config.title)}</h1>
+        <p class="lede">${escapeHtml(config.summary)}</p>
+        <p class="sublede">${escapeHtml(config.theme)}</p>
+
+        <div class="hero-stats">
+          <span class="stat">${activeMarkets.length} lists ready</span>
+          <span class="stat">${activeReports.length} notes ready</span>
+          <span class="stat">Updated ${escapeHtml(formatDate(config.generatedAt) || config.generatedAt)}</span>
+        </div>
+
+        <div class="hero-actions">
+          ${
+            featuredMarket
+              ? `<a class="button" href="${escapeHtml(featuredMarket.trackedSiteUrl || featuredMarket.siteUrl)}">Open the main list</a>`
+              : `<a class="button" href="${escapeHtml(config.trackedHomeUrl || config.siteOrigin)}">Open EnrichAnything</a>`
+          }
+          ${
+            config.featuredReportUrl
+              ? `<a class="ghost" href="${escapeHtml(config.featuredReportUrl)}">Read the matching note</a>`
+              : ""
+          }
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>How people actually use this</h2>
+            <p>Each repo is aimed at a buyer motion, not a vague category page.</p>
+          </div>
+        </div>
+        <div class="grid">
+          ${playbookCards}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Lists you can use now</h2>
+            <p>Open the list on EnrichAnything when you want the full table. Read the GitHub page when you want the context first.</p>
+          </div>
+        </div>
+        <div class="grid">
+          ${marketCards}
+        </div>
+      </section>
+
+      ${
+        reportCards
+          ? `<section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Notes that explain the market</h2>
+            <p>These are the short writeups behind the lists, so the repo does not feel like a random dump of CSV-shaped pages.</p>
+          </div>
+        </div>
+        <div class="grid">
+          ${reportCards}
+        </div>
+      </section>`
+          : ""
+      }
+
+      ${
+        queuedCards
+          ? `<section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Still queued up</h2>
+            <p>These ideas already exist. They just need more public sample depth.</p>
+          </div>
+        </div>
+        <div class="queued-grid">
+          ${queuedCards}
+        </div>
+      </section>`
+          : ""
+      }
+
+      <footer>
+        Want a different cut, more columns, or a fresh export? <a href="${escapeHtml(config.trackedHomeUrl || config.siteOrigin)}">Open EnrichAnything</a>.
+      </footer>
+    </main>
+  </body>
+</html>
+`;
+}
+
+function renderPlaybookMarkdown(playbooks = []) {
+  if (!Array.isArray(playbooks) || !playbooks.length) {
+    return ["- Use the live lists below as a narrowed prospect pool, then click through if you want the full table."];
+  }
+
+  return playbooks.map((playbook) => {
+    const startLine =
+      playbook.startTitle && playbook.startUrl
+        ? ` Start with [${playbook.startTitle}](${playbook.startUrl})${playbook.startStatus ? ` (${playbook.startStatus})` : ""}.`
+        : "";
+
+    return `- ${playbook.role}: ${playbook.pitch}${startLine}`;
+  });
 }
 
 function normalizeStats(stats = []) {
@@ -505,6 +1104,63 @@ function buildReportStatusLine(record = {}) {
   return String(record?.dataNote || "").trim() || "This note is based on a public EnrichAnything list.";
 }
 
+function pickPreferredRecord(records = [], preferredSlug = "") {
+  const items = Array.isArray(records) ? records.filter(Boolean) : [];
+  const slug = String(preferredSlug || "").trim();
+
+  if (slug) {
+    const exact = items.find((record) => String(record.slug || "").trim() === slug);
+    if (exact) {
+      return exact;
+    }
+  }
+
+  return items
+    .slice()
+    .sort((left, right) => {
+      const rankDelta = getStatusRank(left?.status) - getStatusRank(right?.status);
+      if (rankDelta !== 0) {
+        return rankDelta;
+      }
+
+      return String(left?.title || "").localeCompare(String(right?.title || ""));
+    })[0] || null;
+}
+
+function getActiveRecords(records = []) {
+  return Array.isArray(records)
+    ? records.filter((record) => String(record?.status || "").trim() !== "template only")
+    : [];
+}
+
+function getPipelineRecords(records = []) {
+  return Array.isArray(records)
+    ? records.filter((record) => String(record?.status || "").trim() === "template only")
+    : [];
+}
+
+function getStatusRank(status = "") {
+  const value = String(status || "").trim();
+
+  if (value === "live") {
+    return 0;
+  }
+
+  if (value === "collecting sample") {
+    return 1;
+  }
+
+  if (value === "archived sample") {
+    return 2;
+  }
+
+  if (value === "template only") {
+    return 3;
+  }
+
+  return 4;
+}
+
 function formatDate(value = "") {
   const date = new Date(value);
 
@@ -519,8 +1175,52 @@ function formatDate(value = "") {
   }).format(date);
 }
 
+function formatRowCount(value = 0) {
+  const rowCount = Math.max(0, Number(value || 0) || 0);
+  return rowCount ? String(rowCount) : "-";
+}
+
+function buildTrackedUrl(baseUrl = "", { source = "github", medium = "public_repo", campaign = "", content = "" } = {}) {
+  const rawValue = String(baseUrl || "").trim();
+
+  if (!rawValue) {
+    return "";
+  }
+
+  try {
+    const url = new URL(rawValue);
+    url.searchParams.set("utm_source", source);
+    url.searchParams.set("utm_medium", medium);
+
+    if (campaign) {
+      url.searchParams.set("utm_campaign", campaign);
+    }
+
+    if (content) {
+      url.searchParams.set("utm_content", content);
+    }
+
+    return url.toString();
+  } catch {
+    return rawValue;
+  }
+}
+
+function sanitizeColor(value = "", fallback = "#0f766e") {
+  return /^#[0-9a-f]{6}$/i.test(String(value || "").trim()) ? String(value).trim() : fallback;
+}
+
 function escapeTable(value = "") {
   return String(value ?? "").replace(/\|/g, "\\|").replace(/\n/g, "<br>");
+}
+
+function escapeHtml(value = "") {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 async function writeJson(targetPath, value) {

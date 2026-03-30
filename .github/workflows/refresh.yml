@@ -24,7 +24,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add README.md data repo.config.json markets reports
+          git add README.md index.html .nojekyll data repo.config.json markets reports
           if git diff --cached --quiet; then
             exit 0
           fi

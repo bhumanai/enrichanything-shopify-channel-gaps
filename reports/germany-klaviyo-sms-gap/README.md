@@ -2,8 +2,8 @@
 
 A public research note on how often german Shopify brands appear to use Klaviyo email without a visible SMS layer.
 
-- Page: https://www.enrichanything.com/reports/germany-klaviyo-sms-gap
-- Related list: https://www.enrichanything.com/markets/shopify-germany-klaviyo-no-sms
+- Open in EnrichAnything: [See the note](https://www.enrichanything.com/reports/germany-klaviyo-sms-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-germany-klaviyo-sms-gap)
+- Related list: [Open the linked list](https://www.enrichanything.com/markets/shopify-germany-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-germany-klaviyo-sms-gap-market)
 - Status: live
 - Context: Updated from EnrichAnything market scans · live snapshot from March 28, 2026
 - Last checked: March 28, 2026
@@ -43,4 +43,4 @@ This note is live and based on the current public list.
 
 ## Want the full list?
 
-Open the related list in EnrichAnything if you want to inspect rows, add columns, or build your own version: https://www.enrichanything.com/reports/germany-klaviyo-sms-gap
+Open the [related list in EnrichAnything](https://www.enrichanything.com/markets/shopify-germany-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-germany-klaviyo-sms-gap-market) if you want rows, more columns, or a version for your own segment.

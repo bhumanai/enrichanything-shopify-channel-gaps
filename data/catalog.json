@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T11:26:31.907Z",
+  "generatedAt": "2026-03-30T11:52:09.204Z",
   "title": "Shopify Brands Missing TikTok or SMS",
   "summary": "Lists of Shopify brands already spending on Meta or email, but still missing the next obvious channel.",
   "topics": [
@@ -91,7 +91,11 @@
           "note": ""
         }
       ],
-      "sampleRows": []
+      "sampleRows": [],
+      "repoReadmePath": "markets/shopify-france-meta-no-tiktok/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-france-meta-no-tiktok/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/markets/shopify-france-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-france-meta-no-tiktok",
+      "trackedReportUrl": "https://www.enrichanything.com/reports/france-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-france-meta-no-tiktok-report"
     },
     {
       "kind": "market",
@@ -193,7 +197,11 @@
           "gap": "No SMS tooling mentioned",
           "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
         }
-      ]
+      ],
+      "repoReadmePath": "markets/shopify-france-klaviyo-no-sms/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-france-klaviyo-no-sms/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-france-klaviyo-no-sms",
+      "trackedReportUrl": "https://www.enrichanything.com/reports/france-klaviyo-sms-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-france-klaviyo-no-sms-report"
     },
     {
       "kind": "market",
@@ -314,7 +322,11 @@
           "gap": "No visible TikTok setup detected",
           "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
         }
-      ]
+      ],
+      "repoReadmePath": "markets/shopify-germany-meta-no-tiktok/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-germany-meta-no-tiktok/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-germany-meta-no-tiktok",
+      "trackedReportUrl": "https://www.enrichanything.com/reports/germany-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-germany-meta-no-tiktok-report"
     },
     {
       "kind": "market",
@@ -416,7 +428,11 @@
           "gap": "No visible SMS tooling detected",
           "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
         }
-      ]
+      ],
+      "repoReadmePath": "markets/shopify-germany-klaviyo-no-sms/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-germany-klaviyo-no-sms/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/markets/shopify-germany-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-germany-klaviyo-no-sms",
+      "trackedReportUrl": "https://www.enrichanything.com/reports/germany-klaviyo-sms-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-germany-klaviyo-no-sms-report"
     },
     {
       "kind": "market",
@@ -498,7 +514,11 @@
           "note": ""
         }
       ],
-      "sampleRows": []
+      "sampleRows": [],
+      "repoReadmePath": "markets/shopify-spain-meta-no-tiktok/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-spain-meta-no-tiktok/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/markets/shopify-spain-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-spain-meta-no-tiktok",
+      "trackedReportUrl": "https://www.enrichanything.com/reports/spain-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-spain-meta-no-tiktok-report"
     },
     {
       "kind": "market",
@@ -579,7 +599,11 @@
           "note": ""
         }
       ],
-      "sampleRows": []
+      "sampleRows": [],
+      "repoReadmePath": "markets/shopify-sweden-meta-no-tiktok/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-sweden-meta-no-tiktok/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/markets/shopify-sweden-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-sweden-meta-no-tiktok",
+      "trackedReportUrl": "https://www.enrichanything.com/reports/sweden-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-sweden-meta-no-tiktok-report"
     },
     {
       "kind": "market",
@@ -661,7 +685,11 @@
           "note": ""
         }
       ],
-      "sampleRows": []
+      "sampleRows": [],
+      "repoReadmePath": "markets/shopify-netherlands-meta-no-tiktok/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-netherlands-meta-no-tiktok/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/markets/shopify-netherlands-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-netherlands-meta-no-tiktok",
+      "trackedReportUrl": "https://www.enrichanything.com/reports/netherlands-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-netherlands-meta-no-tiktok-report"
     },
     {
       "kind": "market",
@@ -771,7 +799,11 @@
           "gap": "No visible TikTok setup detected",
           "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
         }
-      ]
+      ],
+      "repoReadmePath": "markets/shopify-uk-meta-no-tiktok/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-uk-meta-no-tiktok/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/markets/shopify-uk-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-uk-meta-no-tiktok",
+      "trackedReportUrl": "https://www.enrichanything.com/reports/uk-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-uk-meta-no-tiktok-report"
     }
   ],
   "reports": [
@@ -795,7 +827,11 @@
       "citationText": "",
       "stats": [],
       "chartRows": [],
-      "sampleRows": []
+      "sampleRows": [],
+      "repoReadmePath": "reports/netherlands-meta-tiktok-gap/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/netherlands-meta-tiktok-gap/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/reports/netherlands-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-netherlands-meta-tiktok-gap",
+      "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-netherlands-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-netherlands-meta-tiktok-gap-market"
     },
     {
       "kind": "report",
@@ -878,7 +914,11 @@
           "gap": "No SMS tooling mentioned",
           "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
         }
-      ]
+      ],
+      "repoReadmePath": "reports/france-klaviyo-sms-gap/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/france-klaviyo-sms-gap/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/reports/france-klaviyo-sms-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-france-klaviyo-sms-gap",
+      "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-france-klaviyo-sms-gap-market"
     },
     {
       "kind": "report",
@@ -900,7 +940,11 @@
       "citationText": "",
       "stats": [],
       "chartRows": [],
-      "sampleRows": []
+      "sampleRows": [],
+      "repoReadmePath": "reports/france-meta-tiktok-gap/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/france-meta-tiktok-gap/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/reports/france-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-france-meta-tiktok-gap",
+      "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-france-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-france-meta-tiktok-gap-market"
     },
     {
       "kind": "report",
@@ -983,7 +1027,11 @@
           "gap": "No visible SMS tooling detected",
           "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
         }
-      ]
+      ],
+      "repoReadmePath": "reports/germany-klaviyo-sms-gap/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/germany-klaviyo-sms-gap/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/reports/germany-klaviyo-sms-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-germany-klaviyo-sms-gap",
+      "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-germany-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-germany-klaviyo-sms-gap-market"
     },
     {
       "kind": "report",
@@ -1034,7 +1082,11 @@
           "gap": "No visible TikTok setup detected",
           "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
         }
-      ]
+      ],
+      "repoReadmePath": "reports/germany-meta-tiktok-gap/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/germany-meta-tiktok-gap/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/reports/germany-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-germany-meta-tiktok-gap",
+      "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-germany-meta-tiktok-gap-market"
     },
     {
       "kind": "report",
@@ -1056,7 +1108,11 @@
       "citationText": "",
       "stats": [],
       "chartRows": [],
-      "sampleRows": []
+      "sampleRows": [],
+      "repoReadmePath": "reports/spain-meta-tiktok-gap/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/spain-meta-tiktok-gap/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/reports/spain-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-spain-meta-tiktok-gap",
+      "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-spain-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-spain-meta-tiktok-gap-market"
     },
     {
       "kind": "report",
@@ -1078,7 +1134,11 @@
       "citationText": "",
       "stats": [],
       "chartRows": [],
-      "sampleRows": []
+      "sampleRows": [],
+      "repoReadmePath": "reports/sweden-meta-tiktok-gap/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/sweden-meta-tiktok-gap/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/reports/sweden-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-sweden-meta-tiktok-gap",
+      "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-sweden-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-sweden-meta-tiktok-gap-market"
     },
     {
       "kind": "report",
@@ -1161,7 +1221,11 @@
           "gap": "No visible TikTok setup detected",
           "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
         }
-      ]
+      ],
+      "repoReadmePath": "reports/uk-meta-tiktok-gap/README.md",
+      "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/uk-meta-tiktok-gap/README.md",
+      "trackedSiteUrl": "https://www.enrichanything.com/reports/uk-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-uk-meta-tiktok-gap",
+      "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-uk-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-uk-meta-tiktok-gap-market"
     }
   ]
 }

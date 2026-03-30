@@ -2,8 +2,8 @@
 
 A public list of German Shopify brands that appear active on Meta but do not show a TikTok setup.
 
-- Page: https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok
-- Related note: https://www.enrichanything.com/reports/germany-meta-tiktok-gap
+- Open in EnrichAnything: [See the live list](https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-germany-meta-no-tiktok)
+- Related note: [Read the matching note](https://www.enrichanything.com/reports/germany-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-germany-meta-no-tiktok-report)
 - Useful for: EU TikTok agencies and DTC growth freelancers
 - Status: collecting sample
 - Last checked: March 23, 2026
@@ -66,4 +66,4 @@ This list combines ecommerce stack detection, public marketing signals, country 
 
 This is most useful for teams selling channel expansion to brands already spending on paid social.
 
-Open this list in EnrichAnything if you want the full table, extra columns, or a version for a different niche: https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok
+Open [the live list in EnrichAnything](https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-germany-meta-no-tiktok) if you want the full table, extra columns, or the same search for a different niche.

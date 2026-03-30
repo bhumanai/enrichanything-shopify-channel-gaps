@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopify Brands Missing TikTok or SMS</title>
+    <meta name="description" content="Lists of Shopify brands already spending on Meta or email, but still missing the next obvious channel.">
+    <style>
+      :root {
+        --bg: #f5f0e8;
+        --surface: rgba(255, 251, 245, 0.94);
+        --surface-strong: #fffdf8;
+        --ink: #1c1712;
+        --muted: #62584e;
+        --border: rgba(28, 23, 18, 0.12);
+        --accent: #0f766e;
+        --shadow: 0 24px 60px rgba(33, 25, 18, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 30rem),
+          linear-gradient(180deg, #f7f2ea 0%, #efe6da 100%);
+        color: var(--ink);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 32px 20px 72px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 32px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .topbar-links {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding: 40px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 12px;
+        font-size: clamp(2.3rem, 5vw, 4.4rem);
+        line-height: 0.96;
+        max-width: 14ch;
+      }
+
+      .lede {
+        max-width: 44rem;
+        margin-bottom: 10px;
+        font-size: 1.12rem;
+        line-height: 1.6;
+      }
+
+      .sublede {
+        max-width: 42rem;
+        margin-bottom: 24px;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .hero-stats,
+      .card-actions,
+      .topbar-links,
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .stat {
+        padding: 10px 14px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--surface-strong);
+        font-size: 0.92rem;
+      }
+
+      .hero-actions {
+        margin-top: 24px;
+      }
+
+      .button,
+      .ghost {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 16px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .button {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+      }
+
+      .ghost {
+        background: var(--surface-strong);
+        color: var(--ink);
+      }
+
+      .section {
+        margin-top: 36px;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: flex-end;
+        margin-bottom: 16px;
+      }
+
+      .section-head p {
+        color: var(--muted);
+        max-width: 40rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        padding: 22px;
+        border-radius: 22px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+      }
+
+      .playbook-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 249, 242, 0.95));
+      }
+
+      .list-card h3 {
+        margin-bottom: 10px;
+        font-size: 1.18rem;
+        line-height: 1.2;
+      }
+
+      .card-copy,
+      .card-meta,
+      .card-link,
+      .queued-item span {
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .card-status {
+        margin-bottom: 12px;
+        color: var(--accent);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.76rem;
+      }
+
+      .queued-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 12px;
+      }
+
+      .queued-item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.6);
+      }
+
+      footer {
+        margin-top: 42px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 720px) {
+        .shell {
+          padding: 20px 14px 52px;
+        }
+
+        .hero {
+          padding: 24px;
+          border-radius: 22px;
+        }
+
+        .topbar,
+        .section-head {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="topbar">
+        <strong>EnrichAnything public repo</strong>
+        <div class="topbar-links">
+          <a href="https://github.com/bhumanai/enrichanything-shopify-channel-gaps">GitHub repo</a>
+          <a href="https://www.enrichanything.com/?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=repo-home">Main site</a>
+        </div>
+      </div>
+
+      <section class="hero">
+        <p class="eyebrow">Source-backed prospect lists</p>
+        <h1>Shopify Brands Missing TikTok or SMS</h1>
+        <p class="lede">Lists of Shopify brands already spending on Meta or email, but still missing the next obvious channel.</p>
+        <p class="sublede">Useful if you sell TikTok ads, SMS, or lifecycle work to ecommerce brands.</p>
+
+        <div class="hero-stats">
+          <span class="stat">4 lists ready</span>
+          <span class="stat">4 notes ready</span>
+          <span class="stat">Updated March 30, 2026</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="button" href="https://www.enrichanything.com/markets/shopify-uk-meta-no-tiktok?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=market-shopify-uk-meta-no-tiktok">Open the main list</a>
+          <a class="ghost" href="https://www.enrichanything.com/reports/uk-meta-tiktok-gap?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=report-uk-meta-tiktok-gap">Read the matching note</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>How people actually use this</h2>
+            <p>Each repo is aimed at a buyer motion, not a vague category page.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card playbook-card"><p class="eyebrow">TikTok agencies</p><p class="card-copy">Start with brands already spending on Meta. The pitch is not &#39;you should try paid social.&#39; It is &#39;you already buy traffic, so TikTok is the next obvious test.&#39;</p><p class="card-link"><a href="https://www.enrichanything.com/markets/shopify-uk-meta-no-tiktok?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=market-shopify-uk-meta-no-tiktok">Start with Shopify brands in the UK running Meta ads but not TikTok</a> <span>live</span></p></article><article class="card playbook-card"><p class="eyebrow">SMS and lifecycle teams</p><p class="card-copy">Use the Klaviyo-without-SMS lists. You are not selling retention from scratch. You are finishing a stack the brand already started.</p><p class="card-link"><a href="https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=market-shopify-france-klaviyo-no-sms">Start with Shopify brands in France using Klaviyo but not SMS tooling</a> <span>live</span></p></article><article class="card playbook-card"><p class="eyebrow">Freelance growth operators</p><p class="card-copy">Use the repo as a narrowed prospect pool, then manually validate the top twenty stores before sending anything.</p><p class="card-link"><a href="https://www.enrichanything.com/markets/shopify-germany-klaviyo-no-sms?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=market-shopify-germany-klaviyo-no-sms">Start with Shopify brands in Germany using Klaviyo but not SMS tooling</a> <span>live</span></p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Lists you can use now</h2>
+            <p>Open the list on EnrichAnything when you want the full table. Read the GitHub page when you want the context first.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card list-card"><p class="card-status">live</p><h3>Shopify brands in France using Klaviyo but not SMS tooling</h3><p class="card-copy">A public list of French Shopify brands that appear to run Klaviyo email while still missing a visible SMS layer.</p><p class="card-meta">20 rows · Email/SMS agencies, retention freelancers, Shopify lifecycle consultants</p><div class="card-actions"><a class="ghost" href="https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-france-klaviyo-no-sms/README.md">Read details</a><a class="button" href="https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=market-shopify-france-klaviyo-no-sms">Open list</a></div></article><article class="card list-card"><p class="card-status">collecting sample</p><h3>Shopify brands in Germany running Meta ads but not TikTok</h3><p class="card-copy">A public list of German Shopify brands that appear active on Meta but do not show a TikTok setup.</p><p class="card-meta">12 rows · EU TikTok agencies and DTC growth freelancers</p><div class="card-actions"><a class="ghost" href="https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-germany-meta-no-tiktok/README.md">Read details</a><a class="button" href="https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=market-shopify-germany-meta-no-tiktok">Open list</a></div></article><article class="card list-card"><p class="card-status">live</p><h3>Shopify brands in Germany using Klaviyo but not SMS tooling</h3><p class="card-copy">A public list of German Shopify brands that appear to run Klaviyo email while still missing a visible SMS layer.</p><p class="card-meta">20 rows · Email/SMS agencies, retention freelancers, Shopify lifecycle consultants</p><div class="card-actions"><a class="ghost" href="https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-germany-klaviyo-no-sms/README.md">Read details</a><a class="button" href="https://www.enrichanything.com/markets/shopify-germany-klaviyo-no-sms?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=market-shopify-germany-klaviyo-no-sms">Open list</a></div></article><article class="card list-card"><p class="card-status">live</p><h3>Shopify brands in the UK running Meta ads but not TikTok</h3><p class="card-copy">A public list of UK Shopify brands that appear active on Meta but do not show a TikTok setup.</p><p class="card-meta">22 rows · EU TikTok agencies and DTC growth freelancers</p><div class="card-actions"><a class="ghost" href="https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-uk-meta-no-tiktok/README.md">Read details</a><a class="button" href="https://www.enrichanything.com/markets/shopify-uk-meta-no-tiktok?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=market-shopify-uk-meta-no-tiktok">Open list</a></div></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Notes that explain the market</h2>
+            <p>These are the short writeups behind the lists, so the repo does not feel like a random dump of CSV-shaped pages.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card list-card"><p class="card-status">live</p><h3>French Shopify brands still leave SMS out of an otherwise mature Klaviyo stack</h3><p class="card-copy">A public research note on how often french Shopify brands appear to use Klaviyo email without a visible SMS layer.</p><p class="card-meta">20 rows · Updated from EnrichAnything market scans · live snapshot from March 27, 2026</p><div class="card-actions"><a class="ghost" href="https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/france-klaviyo-sms-gap/README.md">Read details</a><a class="button" href="https://www.enrichanything.com/reports/france-klaviyo-sms-gap?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=report-france-klaviyo-sms-gap">Open note</a></div></article><article class="card list-card"><p class="card-status">live</p><h3>German Shopify brands still leave SMS out of an otherwise mature Klaviyo stack</h3><p class="card-copy">A public research note on how often german Shopify brands appear to use Klaviyo email without a visible SMS layer.</p><p class="card-meta">20 rows · Updated from EnrichAnything market scans · live snapshot from March 28, 2026</p><div class="card-actions"><a class="ghost" href="https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/germany-klaviyo-sms-gap/README.md">Read details</a><a class="button" href="https://www.enrichanything.com/reports/germany-klaviyo-sms-gap?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=report-germany-klaviyo-sms-gap">Open note</a></div></article><article class="card list-card"><p class="card-status">collecting sample</p><h3>German Shopify brands still underuse TikTok after proving Meta demand</h3><p class="card-copy">A public research note on how often German Shopify brands appear active on Meta before showing any visible TikTok setup.</p><p class="card-meta">12 rows · Updated from EnrichAnything market scans · live snapshot from March 23, 2026</p><div class="card-actions"><a class="ghost" href="https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/germany-meta-tiktok-gap/README.md">Read details</a><a class="button" href="https://www.enrichanything.com/reports/germany-meta-tiktok-gap?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=report-germany-meta-tiktok-gap">Open note</a></div></article><article class="card list-card"><p class="card-status">live</p><h3>UK Shopify brands still underuse TikTok after proving Meta demand</h3><p class="card-copy">A public research note on how often uk Shopify brands appear active on Meta before showing any visible TikTok setup.</p><p class="card-meta">22 rows · Updated from EnrichAnything market scans · live snapshot from March 23, 2026</p><div class="card-actions"><a class="ghost" href="https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/uk-meta-tiktok-gap/README.md">Read details</a><a class="button" href="https://www.enrichanything.com/reports/uk-meta-tiktok-gap?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=report-uk-meta-tiktok-gap">Open note</a></div></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Still queued up</h2>
+            <p>These ideas already exist. They just need more public sample depth.</p>
+          </div>
+        </div>
+        <div class="queued-grid">
+          <article class="queued-item"><strong>Shopify brands in France running Meta ads but not TikTok</strong><span>template only</span></article><article class="queued-item"><strong>Shopify brands in Spain running Meta ads but not TikTok</strong><span>template only</span></article><article class="queued-item"><strong>Shopify brands in Sweden running Meta ads but not TikTok</strong><span>template only</span></article><article class="queued-item"><strong>Shopify brands in the Netherlands running Meta ads but not TikTok</strong><span>template only</span></article><article class="queued-item"><strong>Dutch Shopify brands still underuse TikTok after proving Meta demand</strong><span>template only</span></article><article class="queued-item"><strong>French Shopify brands still underuse TikTok after proving Meta demand</strong><span>template only</span></article><article class="queued-item"><strong>Spanish Shopify brands still underuse TikTok after proving Meta demand</strong><span>template only</span></article><article class="queued-item"><strong>Swedish Shopify brands still underuse TikTok after proving Meta demand</strong><span>template only</span></article>
+        </div>
+      </section>
+
+      <footer>
+        Want a different cut, more columns, or a fresh export? <a href="https://www.enrichanything.com/?utm_source=github&amp;utm_medium=public_repo&amp;utm_campaign=enrichanything-shopify-channel-gaps&amp;utm_content=repo-home">Open EnrichAnything</a>.
+      </footer>
+    </main>
+  </body>
+</html>
