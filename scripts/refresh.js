@@ -3,6 +3,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const PUBLIC_API_DOCS_URL = "https://www.enrichanything.com/api/";
+const PUBLIC_API_OPENAPI_URL = "https://www.enrichanything.com/openapi.json";
+const NODE_SDK_REPO_URL = "https://github.com/bhumanai/enrichanything-public-api-node";
+const PYTHON_SDK_REPO_URL = "https://github.com/bhumanai/enrichanything-public-api-python";
 const CONFIG_PATH = path.join(ROOT, "repo.config.json");
 const config = JSON.parse(await fs.readFile(CONFIG_PATH, "utf8"));
 const generatedAt = new Date().toISOString();
@@ -284,8 +288,16 @@ function renderRepoReadme(config = {}) {
     "",
     `- Source product: ${config.siteOrigin}`,
     config.repoUrl ? `- GitHub repo: ${config.repoUrl}` : null,
+    `- Public API docs: ${PUBLIC_API_DOCS_URL}`,
+    `- OpenAPI spec: ${PUBLIC_API_OPENAPI_URL}`,
     `- Last refresh: ${formatDate(config.generatedAt) || config.generatedAt}`,
     "- Refresh command: `npm run refresh`",
+    "",
+    "## Developer links",
+    "",
+    `- Public API docs: [EnrichAnything API](${PUBLIC_API_DOCS_URL})`,
+    `- Node SDK repo: [enrichanything-public-api-node](${NODE_SDK_REPO_URL})`,
+    `- Python SDK repo: [enrichanything-public-api-python](${PYTHON_SDK_REPO_URL})`,
     "",
     "## Use this repo if...",
     "",
@@ -920,6 +932,42 @@ function renderLandingPage(config = {}) {
         </div>
         <div class="grid">
           ${playbookCards}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Use the same data as JSON</h2>
+            <p>API docs, OpenAPI, and thin SDK repos for teams that want the published scans programmatically.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <p class="card-status">Docs</p>
+            <h3>Public API docs</h3>
+            <p class="card-copy">Stable docs URL plus OpenAPI for directories, examples, and internal tooling.</p>
+            <div class="card-actions">
+              <a class="button" href="${escapeHtml(PUBLIC_API_DOCS_URL)}">Open docs</a>
+              <a class="ghost" href="${escapeHtml(PUBLIC_API_OPENAPI_URL)}">OpenAPI JSON</a>
+            </div>
+          </article>
+          <article class="card">
+            <p class="card-status">Node</p>
+            <h3>Node SDK repo</h3>
+            <p class="card-copy">Thin wrapper around the public market and report endpoints.</p>
+            <div class="card-actions">
+              <a class="button" href="${escapeHtml(NODE_SDK_REPO_URL)}">View repo</a>
+            </div>
+          </article>
+          <article class="card">
+            <p class="card-status">Python</p>
+            <h3>Python SDK repo</h3>
+            <p class="card-copy">Same public endpoints packaged for notebooks, scripts, and ops workflows.</p>
+            <div class="card-actions">
+              <a class="button" href="${escapeHtml(PYTHON_SDK_REPO_URL)}">View repo</a>
+            </div>
+          </article>
         </div>
       </section>
 
