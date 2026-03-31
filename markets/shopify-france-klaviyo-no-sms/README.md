@@ -2,8 +2,10 @@
 
 A public list of French Shopify brands that appear to run Klaviyo email while still missing a visible SMS layer.
 
-- Page: https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms
-- Related note: https://www.enrichanything.com/reports/france-klaviyo-sms-gap
+- Dataset page: [Open the latest dataset](https://www.enrichanything.com/datasets/markets/shopify-france-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-france-klaviyo-no-sms-dataset)
+- Immutable snapshot: [Open the stable permalink](https://www.enrichanything.com/snapshots/markets/shopify-france-klaviyo-no-sms/2026-03-27-b4d4422768?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-france-klaviyo-no-sms-snapshot)
+- Open in EnrichAnything: [See the live list](https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-france-klaviyo-no-sms)
+- Related note: [Read the matching note](https://www.enrichanything.com/reports/france-klaviyo-sms-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-france-klaviyo-no-sms-report)
 - Useful for: Email/SMS agencies, retention freelancers, Shopify lifecycle consultants
 - Status: live
 - Last checked: March 27, 2026
@@ -56,4 +58,4 @@ This list combines Shopify detection, a France footprint, visible Klaviyo usage,
 
 This is strongest for operators selling retention expansion to brands already serious about lifecycle email.
 
-Open this list in EnrichAnything if you want the full table, extra columns, or a version for a different niche: https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms
+Open [the live list in EnrichAnything](https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-france-klaviyo-no-sms) if you want the full table, extra columns, or the same search for a different niche.

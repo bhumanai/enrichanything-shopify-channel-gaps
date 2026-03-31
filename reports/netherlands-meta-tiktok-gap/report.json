@@ -7,6 +7,13 @@
   "marketSlug": "shopify-netherlands-meta-no-tiktok",
   "marketUrl": "https://www.enrichanything.com/markets/shopify-netherlands-meta-no-tiktok",
   "siteUrl": "https://www.enrichanything.com/reports/netherlands-meta-tiktok-gap",
+  "snapshotId": "2026-03-31-56da7a43ed",
+  "datasetUrl": "https://www.enrichanything.com/datasets/reports/netherlands-meta-tiktok-gap",
+  "datasetJsonUrl": "https://www.enrichanything.com/datasets/reports/netherlands-meta-tiktok-gap/payload.json",
+  "datasetCsvUrl": "https://www.enrichanything.com/datasets/reports/netherlands-meta-tiktok-gap/sample-rows.csv",
+  "snapshotUrl": "https://www.enrichanything.com/snapshots/reports/netherlands-meta-tiktok-gap/2026-03-31-56da7a43ed",
+  "snapshotJsonUrl": "https://www.enrichanything.com/snapshots/reports/netherlands-meta-tiktok-gap/2026-03-31-56da7a43ed/payload.json",
+  "snapshotCsvUrl": "https://www.enrichanything.com/snapshots/reports/netherlands-meta-tiktok-gap/2026-03-31-56da7a43ed/sample-rows.csv",
   "status": "template only",
   "live": false,
   "dataSource": "template",
@@ -18,5 +25,11 @@
   "citationText": "",
   "stats": [],
   "chartRows": [],
-  "sampleRows": []
+  "sampleRows": [],
+  "repoReadmePath": "reports/netherlands-meta-tiktok-gap/README.md",
+  "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/netherlands-meta-tiktok-gap/README.md",
+  "trackedDatasetUrl": "https://www.enrichanything.com/datasets/reports/netherlands-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-netherlands-meta-tiktok-gap-dataset",
+  "trackedSnapshotUrl": "https://www.enrichanything.com/snapshots/reports/netherlands-meta-tiktok-gap/2026-03-31-56da7a43ed?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-netherlands-meta-tiktok-gap-snapshot",
+  "trackedSiteUrl": "https://www.enrichanything.com/reports/netherlands-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-netherlands-meta-tiktok-gap",
+  "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-netherlands-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-netherlands-meta-tiktok-gap-market"
 }

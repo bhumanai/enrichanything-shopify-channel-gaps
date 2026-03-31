@@ -7,6 +7,13 @@
   "marketSlug": "shopify-france-klaviyo-no-sms",
   "marketUrl": "https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms",
   "siteUrl": "https://www.enrichanything.com/reports/france-klaviyo-sms-gap",
+  "snapshotId": "2026-03-27-b4096c1ba6",
+  "datasetUrl": "https://www.enrichanything.com/datasets/reports/france-klaviyo-sms-gap",
+  "datasetJsonUrl": "https://www.enrichanything.com/datasets/reports/france-klaviyo-sms-gap/payload.json",
+  "datasetCsvUrl": "https://www.enrichanything.com/datasets/reports/france-klaviyo-sms-gap/sample-rows.csv",
+  "snapshotUrl": "https://www.enrichanything.com/snapshots/reports/france-klaviyo-sms-gap/2026-03-27-b4096c1ba6",
+  "snapshotJsonUrl": "https://www.enrichanything.com/snapshots/reports/france-klaviyo-sms-gap/2026-03-27-b4096c1ba6/payload.json",
+  "snapshotCsvUrl": "https://www.enrichanything.com/snapshots/reports/france-klaviyo-sms-gap/2026-03-27-b4096c1ba6/sample-rows.csv",
   "status": "live",
   "live": true,
   "dataSource": "collected_sample",
@@ -79,5 +86,11 @@
       "gap": "No SMS tooling mentioned",
       "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
     }
-  ]
+  ],
+  "repoReadmePath": "reports/france-klaviyo-sms-gap/README.md",
+  "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/france-klaviyo-sms-gap/README.md",
+  "trackedDatasetUrl": "https://www.enrichanything.com/datasets/reports/france-klaviyo-sms-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-france-klaviyo-sms-gap-dataset",
+  "trackedSnapshotUrl": "https://www.enrichanything.com/snapshots/reports/france-klaviyo-sms-gap/2026-03-27-b4096c1ba6?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-france-klaviyo-sms-gap-snapshot",
+  "trackedSiteUrl": "https://www.enrichanything.com/reports/france-klaviyo-sms-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-france-klaviyo-sms-gap",
+  "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-france-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-france-klaviyo-sms-gap-market"
 }

@@ -7,6 +7,13 @@
   "marketSlug": "shopify-germany-meta-no-tiktok",
   "marketUrl": "https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok",
   "siteUrl": "https://www.enrichanything.com/reports/germany-meta-tiktok-gap",
+  "snapshotId": "2026-03-23-f17e9d3d1f",
+  "datasetUrl": "https://www.enrichanything.com/datasets/reports/germany-meta-tiktok-gap",
+  "datasetJsonUrl": "https://www.enrichanything.com/datasets/reports/germany-meta-tiktok-gap/payload.json",
+  "datasetCsvUrl": "https://www.enrichanything.com/datasets/reports/germany-meta-tiktok-gap/sample-rows.csv",
+  "snapshotUrl": "https://www.enrichanything.com/snapshots/reports/germany-meta-tiktok-gap/2026-03-23-f17e9d3d1f",
+  "snapshotJsonUrl": "https://www.enrichanything.com/snapshots/reports/germany-meta-tiktok-gap/2026-03-23-f17e9d3d1f/payload.json",
+  "snapshotCsvUrl": "https://www.enrichanything.com/snapshots/reports/germany-meta-tiktok-gap/2026-03-23-f17e9d3d1f/sample-rows.csv",
   "status": "collecting sample",
   "live": false,
   "dataSource": "collecting_sample",
@@ -47,5 +54,11 @@
       "gap": "No visible TikTok setup detected",
       "whyNow": "Active Meta spend suggests paid acquisition is already working, so the missing TikTok layer is actionable now."
     }
-  ]
+  ],
+  "repoReadmePath": "reports/germany-meta-tiktok-gap/README.md",
+  "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/germany-meta-tiktok-gap/README.md",
+  "trackedDatasetUrl": "https://www.enrichanything.com/datasets/reports/germany-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-germany-meta-tiktok-gap-dataset",
+  "trackedSnapshotUrl": "https://www.enrichanything.com/snapshots/reports/germany-meta-tiktok-gap/2026-03-23-f17e9d3d1f?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-germany-meta-tiktok-gap-snapshot",
+  "trackedSiteUrl": "https://www.enrichanything.com/reports/germany-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-germany-meta-tiktok-gap",
+  "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-germany-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-germany-meta-tiktok-gap-market"
 }

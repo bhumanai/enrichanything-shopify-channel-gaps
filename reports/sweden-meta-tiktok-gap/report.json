@@ -7,6 +7,13 @@
   "marketSlug": "shopify-sweden-meta-no-tiktok",
   "marketUrl": "https://www.enrichanything.com/markets/shopify-sweden-meta-no-tiktok",
   "siteUrl": "https://www.enrichanything.com/reports/sweden-meta-tiktok-gap",
+  "snapshotId": "2026-03-23-ee06793941",
+  "datasetUrl": "https://www.enrichanything.com/datasets/reports/sweden-meta-tiktok-gap",
+  "datasetJsonUrl": "https://www.enrichanything.com/datasets/reports/sweden-meta-tiktok-gap/payload.json",
+  "datasetCsvUrl": "https://www.enrichanything.com/datasets/reports/sweden-meta-tiktok-gap/sample-rows.csv",
+  "snapshotUrl": "https://www.enrichanything.com/snapshots/reports/sweden-meta-tiktok-gap/2026-03-23-ee06793941",
+  "snapshotJsonUrl": "https://www.enrichanything.com/snapshots/reports/sweden-meta-tiktok-gap/2026-03-23-ee06793941/payload.json",
+  "snapshotCsvUrl": "https://www.enrichanything.com/snapshots/reports/sweden-meta-tiktok-gap/2026-03-23-ee06793941/sample-rows.csv",
   "status": "template only",
   "live": false,
   "dataSource": "template",
@@ -18,5 +25,11 @@
   "citationText": "",
   "stats": [],
   "chartRows": [],
-  "sampleRows": []
+  "sampleRows": [],
+  "repoReadmePath": "reports/sweden-meta-tiktok-gap/README.md",
+  "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/sweden-meta-tiktok-gap/README.md",
+  "trackedDatasetUrl": "https://www.enrichanything.com/datasets/reports/sweden-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-sweden-meta-tiktok-gap-dataset",
+  "trackedSnapshotUrl": "https://www.enrichanything.com/snapshots/reports/sweden-meta-tiktok-gap/2026-03-23-ee06793941?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-sweden-meta-tiktok-gap-snapshot",
+  "trackedSiteUrl": "https://www.enrichanything.com/reports/sweden-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-sweden-meta-tiktok-gap",
+  "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-sweden-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-sweden-meta-tiktok-gap-market"
 }

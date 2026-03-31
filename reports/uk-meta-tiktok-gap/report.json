@@ -7,6 +7,13 @@
   "marketSlug": "shopify-uk-meta-no-tiktok",
   "marketUrl": "https://www.enrichanything.com/markets/shopify-uk-meta-no-tiktok",
   "siteUrl": "https://www.enrichanything.com/reports/uk-meta-tiktok-gap",
+  "snapshotId": "2026-03-23-728009ac2e",
+  "datasetUrl": "https://www.enrichanything.com/datasets/reports/uk-meta-tiktok-gap",
+  "datasetJsonUrl": "https://www.enrichanything.com/datasets/reports/uk-meta-tiktok-gap/payload.json",
+  "datasetCsvUrl": "https://www.enrichanything.com/datasets/reports/uk-meta-tiktok-gap/sample-rows.csv",
+  "snapshotUrl": "https://www.enrichanything.com/snapshots/reports/uk-meta-tiktok-gap/2026-03-23-728009ac2e",
+  "snapshotJsonUrl": "https://www.enrichanything.com/snapshots/reports/uk-meta-tiktok-gap/2026-03-23-728009ac2e/payload.json",
+  "snapshotCsvUrl": "https://www.enrichanything.com/snapshots/reports/uk-meta-tiktok-gap/2026-03-23-728009ac2e/sample-rows.csv",
   "status": "live",
   "live": true,
   "dataSource": "collected_sample",
@@ -79,5 +86,11 @@
       "gap": "No visible TikTok setup detected",
       "whyNow": "The brand is already running paid acquisition, so adjacent channel gaps are actionable now."
     }
-  ]
+  ],
+  "repoReadmePath": "reports/uk-meta-tiktok-gap/README.md",
+  "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/reports/uk-meta-tiktok-gap/README.md",
+  "trackedDatasetUrl": "https://www.enrichanything.com/datasets/reports/uk-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-uk-meta-tiktok-gap-dataset",
+  "trackedSnapshotUrl": "https://www.enrichanything.com/snapshots/reports/uk-meta-tiktok-gap/2026-03-23-728009ac2e?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-uk-meta-tiktok-gap-snapshot",
+  "trackedSiteUrl": "https://www.enrichanything.com/reports/uk-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-uk-meta-tiktok-gap",
+  "trackedMarketUrl": "https://www.enrichanything.com/markets/shopify-uk-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=report-uk-meta-tiktok-gap-market"
 }

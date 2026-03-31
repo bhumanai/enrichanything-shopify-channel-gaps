@@ -1,8 +1,10 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const PUBLIC_DATASET_INDEX_URL = "https://www.enrichanything.com/datasets/";
 const PUBLIC_API_DOCS_URL = "https://www.enrichanything.com/api/";
 const PUBLIC_API_OPENAPI_URL = "https://www.enrichanything.com/openapi.json";
 const NODE_SDK_REPO_URL = "https://github.com/bhumanai/enrichanything-public-api-node";
@@ -86,8 +88,15 @@ async function fetchJson(url, slug) {
 }
 
 function mergeMarket(previous, payload) {
+  const snapshotId = buildSnapshotId(payload, generatedAt);
   return {
     ...previous,
+    ...buildDatasetLinks({
+      kind: "market",
+      slug: String(previous?.slug || "").trim(),
+      siteOrigin: config.siteOrigin,
+      snapshotId,
+    }),
     live: Boolean(payload?.live),
     dataSource: String(payload?.dataSource || "").trim(),
     dataNote: String(payload?.dataNote || "").trim(),
@@ -110,8 +119,15 @@ function mergeMarket(previous, payload) {
 }
 
 function mergeReport(previous, payload) {
+  const snapshotId = buildSnapshotId(payload, generatedAt);
   return {
     ...previous,
+    ...buildDatasetLinks({
+      kind: "report",
+      slug: String(previous?.slug || "").trim(),
+      siteOrigin: config.siteOrigin,
+      snapshotId,
+    }),
     live: Boolean(payload?.live),
     dataSource: String(payload?.dataSource || "").trim(),
     dataNote: String(payload?.dataNote || "").trim(),
@@ -191,10 +207,14 @@ function decorateRepoConfig(config = {}) {
     reports,
     featuredMarketSlug: featuredMarket?.slug || "",
     featuredMarketTitle: featuredMarket?.title || "",
-    featuredMarketUrl: featuredMarket?.trackedSiteUrl || trackedHomeUrl,
+    featuredMarketUrl: featuredMarket?.trackedDatasetUrl || featuredMarket?.trackedSiteUrl || trackedHomeUrl,
+    featuredMarketSnapshotUrl:
+      featuredMarket?.trackedSnapshotUrl || featuredMarket?.trackedDatasetUrl || "",
     featuredReportSlug: featuredReport?.slug || "",
     featuredReportTitle: featuredReport?.title || "",
-    featuredReportUrl: featuredReport?.trackedSiteUrl || trackedHomeUrl,
+    featuredReportUrl: featuredReport?.trackedDatasetUrl || featuredReport?.trackedSiteUrl || trackedHomeUrl,
+    featuredReportSnapshotUrl:
+      featuredReport?.trackedSnapshotUrl || featuredReport?.trackedDatasetUrl || "",
     buyerPlaybooks: Array.isArray(config.buyerPlaybooks)
       ? config.buyerPlaybooks.map((playbook) =>
           decoratePlaybook({
@@ -218,6 +238,14 @@ function decorateMarket({ market = {}, campaign = "", repoUrl = "", reportBySlug
     reportSlug,
     repoReadmePath: slug ? `markets/${slug}/README.md` : "",
     githubReadmeUrl: slug && repoUrl ? `${repoUrl}/blob/main/markets/${slug}/README.md` : "",
+    trackedDatasetUrl: buildTrackedUrl(market.datasetUrl, {
+      campaign,
+      content: `market-${slug}-dataset`,
+    }),
+    trackedSnapshotUrl: buildTrackedUrl(market.snapshotUrl, {
+      campaign,
+      content: `market-${slug}-snapshot`,
+    }),
     trackedSiteUrl: buildTrackedUrl(market.siteUrl, {
       campaign,
       content: `market-${slug}`,
@@ -239,6 +267,14 @@ function decorateReport({ report = {}, campaign = "", repoUrl = "" } = {}) {
     marketSlug,
     repoReadmePath: slug ? `reports/${slug}/README.md` : "",
     githubReadmeUrl: slug && repoUrl ? `${repoUrl}/blob/main/reports/${slug}/README.md` : "",
+    trackedDatasetUrl: buildTrackedUrl(report.datasetUrl, {
+      campaign,
+      content: `report-${slug}-dataset`,
+    }),
+    trackedSnapshotUrl: buildTrackedUrl(report.snapshotUrl, {
+      campaign,
+      content: `report-${slug}-snapshot`,
+    }),
     trackedSiteUrl: buildTrackedUrl(report.siteUrl, {
       campaign,
       content: `report-${slug}`,
@@ -257,7 +293,7 @@ function decoratePlaybook({ playbook = {}, marketBySlug = new Map(), trackedHome
     startSlug,
     startTitle: market?.title || "",
     startStatus: market?.status || "",
-    startUrl: market?.trackedSiteUrl || trackedHomeUrl,
+    startUrl: market?.trackedDatasetUrl || market?.trackedSiteUrl || trackedHomeUrl,
     startReadmePath: market?.repoReadmePath || "",
   };
 }
@@ -268,6 +304,10 @@ function renderRepoReadme(config = {}) {
   const activeReports = getActiveRecords(config.reports);
   const pipelineReports = getPipelineRecords(config.reports);
   const featuredMarket = pickPreferredRecord(config.markets, config.featuredMarketSlug);
+  const featuredReport = pickPreferredRecord(
+    config.reports,
+    featuredMarket?.reportSlug || config.featuredReportSlug,
+  );
 
   const lines = [
     `# ${config.title}`,
@@ -281,13 +321,20 @@ function renderRepoReadme(config = {}) {
     "## Start here",
     "",
     featuredMarket
-      ? `- Fastest first click: [${featuredMarket.title}](${featuredMarket.trackedSiteUrl || featuredMarket.siteUrl}) (${featuredMarket.status})`
+      ? `- Fastest first click: [${featuredMarket.title} dataset](${featuredMarket.trackedDatasetUrl || featuredMarket.datasetUrl || featuredMarket.trackedSiteUrl || featuredMarket.siteUrl}) (${featuredMarket.status})`
       : `- Open EnrichAnything: [Build from the main site](${config.trackedHomeUrl || config.siteOrigin})`,
+    featuredMarket?.trackedSnapshotUrl || featuredMarket?.snapshotUrl
+      ? `- Stable link: [${featuredMarket.title} snapshot](${featuredMarket.trackedSnapshotUrl || featuredMarket.snapshotUrl})`
+      : null,
+    featuredReport
+      ? `- Matching note: [${featuredReport.title} dataset](${featuredReport.trackedDatasetUrl || featuredReport.datasetUrl || featuredReport.trackedSiteUrl || featuredReport.siteUrl})`
+      : null,
     config.pagesUrl ? `- Cleaner web version: [${config.pagesUrl}](${config.pagesUrl})` : null,
     `- Full product: [EnrichAnything](${config.trackedHomeUrl || config.siteOrigin})`,
     "",
     `- Source product: ${config.siteOrigin}`,
     config.repoUrl ? `- GitHub repo: ${config.repoUrl}` : null,
+    `- Dataset hub: ${PUBLIC_DATASET_INDEX_URL}`,
     `- Public API docs: ${PUBLIC_API_DOCS_URL}`,
     `- OpenAPI spec: ${PUBLIC_API_OPENAPI_URL}`,
     `- Last refresh: ${formatDate(config.generatedAt) || config.generatedAt}`,
@@ -295,6 +342,7 @@ function renderRepoReadme(config = {}) {
     "",
     "## Developer links",
     "",
+    `- Dataset hub: [EnrichAnything datasets](${PUBLIC_DATASET_INDEX_URL})`,
     `- Public API docs: [EnrichAnything API](${PUBLIC_API_DOCS_URL})`,
     `- Node SDK repo: [enrichanything-public-api-node](${NODE_SDK_REPO_URL})`,
     `- Python SDK repo: [enrichanything-public-api-python](${PYTHON_SDK_REPO_URL})`,
@@ -308,11 +356,11 @@ function renderRepoReadme(config = {}) {
     "",
     "## Lists you can use now",
     "",
-    "| List | Status | Rows | Open |",
-    "| --- | --- | ---: | --- |",
+    "| List | Status | Rows | Dataset | Live list |",
+    "| --- | --- | ---: | --- | --- |",
     ...activeMarkets.map(
       (market) =>
-        `| [${escapeTable(market.title)}](${market.repoReadmePath}) | ${escapeTable(market.status)} | ${formatRowCount(market.rowCount)} | [Open in EnrichAnything](${market.trackedSiteUrl || market.siteUrl}) |`,
+        `| [${escapeTable(market.title)}](${market.repoReadmePath}) | ${escapeTable(market.status)} | ${formatRowCount(market.rowCount)} | [Dataset](${market.trackedDatasetUrl || market.datasetUrl || market.trackedSiteUrl || market.siteUrl}) | [Live list](${market.trackedSiteUrl || market.siteUrl}) |`,
     ),
     "",
   );
@@ -321,11 +369,11 @@ function renderRepoReadme(config = {}) {
     lines.push(
       "## Notes that explain the market",
       "",
-      "| Note | Status | Rows | Open |",
-      "| --- | --- | ---: | --- |",
+      "| Note | Status | Rows | Dataset | Source note |",
+      "| --- | --- | ---: | --- | --- |",
       ...activeReports.map(
         (report) =>
-          `| [${escapeTable(report.title)}](${report.repoReadmePath}) | ${escapeTable(report.status)} | ${formatRowCount(report.rowCount)} | [Open in EnrichAnything](${report.trackedSiteUrl || report.siteUrl}) |`,
+          `| [${escapeTable(report.title)}](${report.repoReadmePath}) | ${escapeTable(report.status)} | ${formatRowCount(report.rowCount)} | [Dataset](${report.trackedDatasetUrl || report.datasetUrl || report.trackedSiteUrl || report.siteUrl}) | [Source note](${report.trackedSiteUrl || report.siteUrl}) |`,
       ),
       "",
     );
@@ -377,6 +425,12 @@ function renderMarketReadme(record = {}) {
     "",
     record.summary || "Public company list from EnrichAnything.",
     "",
+    record.datasetUrl
+      ? `- Dataset page: [Open the latest dataset](${record.trackedDatasetUrl || record.datasetUrl})`
+      : null,
+    record.snapshotUrl
+      ? `- Immutable snapshot: [Open the stable permalink](${record.trackedSnapshotUrl || record.snapshotUrl})`
+      : null,
     record.trackedSiteUrl
       ? `- Open in EnrichAnything: [See the live list](${record.trackedSiteUrl})`
       : `- Page: ${record.siteUrl}`,
@@ -489,6 +543,12 @@ function renderReportReadme(record = {}) {
     "",
     record.summary || "Public note from EnrichAnything.",
     "",
+    record.datasetUrl
+      ? `- Dataset page: [Open the latest dataset](${record.trackedDatasetUrl || record.datasetUrl})`
+      : null,
+    record.snapshotUrl
+      ? `- Immutable snapshot: [Open the stable permalink](${record.trackedSnapshotUrl || record.snapshotUrl})`
+      : null,
     record.trackedSiteUrl
       ? `- Open in EnrichAnything: [See the note](${record.trackedSiteUrl})`
       : `- Page: ${record.siteUrl}`,
@@ -599,7 +659,8 @@ function renderLandingPage(config = {}) {
         market.githubReadmeUrl
           ? `<a class="ghost" href="${escapeHtml(market.githubReadmeUrl)}">Read details</a>`
           : "",
-        `<a class="button" href="${escapeHtml(market.trackedSiteUrl || market.siteUrl)}">Open list</a>`,
+        `<a class="button" href="${escapeHtml(market.trackedDatasetUrl || market.datasetUrl || market.trackedSiteUrl || market.siteUrl)}">Open dataset</a>`,
+        `<a class="ghost" href="${escapeHtml(market.trackedSiteUrl || market.siteUrl)}">Live list</a>`,
         "</div>",
         "</article>",
       ].join(""),
@@ -618,7 +679,8 @@ function renderLandingPage(config = {}) {
         report.githubReadmeUrl
           ? `<a class="ghost" href="${escapeHtml(report.githubReadmeUrl)}">Read details</a>`
           : "",
-        `<a class="button" href="${escapeHtml(report.trackedSiteUrl || report.siteUrl)}">Open note</a>`,
+        `<a class="button" href="${escapeHtml(report.trackedDatasetUrl || report.datasetUrl || report.trackedSiteUrl || report.siteUrl)}">Open dataset</a>`,
+        `<a class="ghost" href="${escapeHtml(report.trackedSiteUrl || report.siteUrl)}">Source note</a>`,
         "</div>",
         "</article>",
       ].join(""),
@@ -912,12 +974,14 @@ function renderLandingPage(config = {}) {
         <div class="hero-actions">
           ${
             featuredMarket
-              ? `<a class="button" href="${escapeHtml(featuredMarket.trackedSiteUrl || featuredMarket.siteUrl)}">Open the main list</a>`
+              ? `<a class="button" href="${escapeHtml(featuredMarket.trackedDatasetUrl || featuredMarket.datasetUrl || featuredMarket.trackedSiteUrl || featuredMarket.siteUrl)}">Open the main dataset</a>`
               : `<a class="button" href="${escapeHtml(config.trackedHomeUrl || config.siteOrigin)}">Open EnrichAnything</a>`
           }
           ${
-            config.featuredReportUrl
-              ? `<a class="ghost" href="${escapeHtml(config.featuredReportUrl)}">Read the matching note</a>`
+            config.featuredMarketSnapshotUrl
+              ? `<a class="ghost" href="${escapeHtml(config.featuredMarketSnapshotUrl)}">Open stable snapshot</a>`
+              : config.featuredReportUrl
+                ? `<a class="ghost" href="${escapeHtml(config.featuredReportUrl)}">Read the matching note</a>`
               : ""
           }
         </div>
@@ -938,34 +1002,39 @@ function renderLandingPage(config = {}) {
       <section class="section">
         <div class="section-head">
           <div>
-            <h2>Use the same data as JSON</h2>
-            <p>API docs, OpenAPI, and thin SDK repos for teams that want the published scans programmatically.</p>
+            <h2>Use the public dataset directly</h2>
+            <p>Start with the dataset pages and immutable snapshots. Use the API and SDKs when you want the same public data programmatically.</p>
           </div>
         </div>
         <div class="grid">
           <article class="card">
-            <p class="card-status">Docs</p>
-            <h3>Public API docs</h3>
-            <p class="card-copy">Stable docs URL plus OpenAPI for directories, examples, and internal tooling.</p>
+            <p class="card-status">Dataset hub</p>
+            <h3>Dataset pages</h3>
+            <p class="card-copy">Latest dataset URLs with JSON, sample CSV, and a cleaner citation surface than the raw docs page.</p>
+            <div class="card-actions">
+              <a class="button" href="${escapeHtml(PUBLIC_DATASET_INDEX_URL)}">Open datasets</a>
+              ${
+                featuredMarket?.trackedDatasetUrl || featuredMarket?.datasetUrl
+                  ? `<a class="ghost" href="${escapeHtml(featuredMarket?.trackedDatasetUrl || featuredMarket?.datasetUrl || "")}">Featured dataset</a>`
+                  : ""
+              }
+            </div>
+          </article>
+          <article class="card">
+            <p class="card-status">Stable link</p>
+            <h3>Immutable snapshots</h3>
+            <p class="card-copy">Use the snapshot permalink when you want a fixed citation target instead of the latest dataset URL.</p>
+            <div class="card-actions">
+              <a class="button" href="${escapeHtml(config.featuredMarketSnapshotUrl || config.featuredReportSnapshotUrl || PUBLIC_DATASET_INDEX_URL)}">Open snapshot</a>
+            </div>
+          </article>
+          <article class="card">
+            <p class="card-status">API</p>
+            <h3>Programmatic access</h3>
+            <p class="card-copy">Stable docs URL, OpenAPI, and thin SDK repos for the same public market and report payloads.</p>
             <div class="card-actions">
               <a class="button" href="${escapeHtml(PUBLIC_API_DOCS_URL)}">Open docs</a>
               <a class="ghost" href="${escapeHtml(PUBLIC_API_OPENAPI_URL)}">OpenAPI JSON</a>
-            </div>
-          </article>
-          <article class="card">
-            <p class="card-status">Node</p>
-            <h3>Node SDK repo</h3>
-            <p class="card-copy">Thin wrapper around the public market and report endpoints.</p>
-            <div class="card-actions">
-              <a class="button" href="${escapeHtml(NODE_SDK_REPO_URL)}">View repo</a>
-            </div>
-          </article>
-          <article class="card">
-            <p class="card-status">Python</p>
-            <h3>Python SDK repo</h3>
-            <p class="card-copy">Same public endpoints packaged for notebooks, scripts, and ops workflows.</p>
-            <div class="card-actions">
-              <a class="button" href="${escapeHtml(PYTHON_SDK_REPO_URL)}">View repo</a>
             </div>
           </article>
         </div>
@@ -975,7 +1044,7 @@ function renderLandingPage(config = {}) {
         <div class="section-head">
           <div>
             <h2>Lists you can use now</h2>
-            <p>Open the list on EnrichAnything when you want the full table. Read the GitHub page when you want the context first.</p>
+            <p>Open the dataset page when you want something citable. Open the live list when you want the broader table and full product surface.</p>
           </div>
         </div>
         <div class="grid">
@@ -1243,6 +1312,35 @@ function formatRowCount(value = 0) {
   return rowCount ? String(rowCount) : "-";
 }
 
+function buildSnapshotId(payload = {}, fallbackValue = "") {
+  const timestamp = normalizeIsoDate(String(payload?.lastSuccessAt || fallbackValue || "").trim());
+  const datePart = timestamp ? timestamp.slice(0, 10) : "snapshot";
+  const hash = crypto
+    .createHash("sha1")
+    .update(JSON.stringify(payload || {}))
+    .digest("hex")
+    .slice(0, 10);
+  return `${datePart}-${hash}`;
+}
+
+function buildDatasetLinks({ kind = "market", slug = "", siteOrigin = "", snapshotId = "" } = {}) {
+  const section = kind === "report" ? "reports" : "markets";
+  const safeSlug = String(slug || "").trim();
+  const safeSnapshotId = String(snapshotId || "").trim();
+  const datasetPath = safeSlug ? `datasets/${section}/${safeSlug}` : "";
+  const snapshotPath = safeSlug && safeSnapshotId ? `snapshots/${section}/${safeSlug}/${safeSnapshotId}` : "";
+
+  return {
+    snapshotId: safeSnapshotId,
+    datasetUrl: datasetPath ? joinUrl(siteOrigin, datasetPath) : "",
+    datasetJsonUrl: datasetPath ? joinUrl(siteOrigin, `${datasetPath}/payload.json`) : "",
+    datasetCsvUrl: datasetPath ? joinUrl(siteOrigin, `${datasetPath}/sample-rows.csv`) : "",
+    snapshotUrl: snapshotPath ? joinUrl(siteOrigin, snapshotPath) : "",
+    snapshotJsonUrl: snapshotPath ? joinUrl(siteOrigin, `${snapshotPath}/payload.json`) : "",
+    snapshotCsvUrl: snapshotPath ? joinUrl(siteOrigin, `${snapshotPath}/sample-rows.csv`) : "",
+  };
+}
+
 function buildTrackedUrl(baseUrl = "", { source = "github", medium = "public_repo", campaign = "", content = "" } = {}) {
   const rawValue = String(baseUrl || "").trim();
 
@@ -1282,6 +1380,27 @@ function buildAssetUrl(baseUrl = "", assetPath = "") {
   } catch {
     return "";
   }
+}
+
+function joinUrl(origin = "", pathname = "") {
+  const normalizedOrigin = String(origin || "").trim().replace(/\/+$/, "");
+  const normalizedPath = String(pathname || "")
+    .trim()
+    .replace(/^\/+/, "");
+
+  return normalizedOrigin && normalizedPath
+    ? `${normalizedOrigin}/${normalizedPath}`
+    : normalizedOrigin || normalizedPath;
+}
+
+function normalizeIsoDate(value = "") {
+  const date = new Date(value);
+
+  if (!value || Number.isNaN(date.getTime())) {
+    return "";
+  }
+
+  return date.toISOString();
 }
 
 function sanitizeColor(value = "", fallback = "#0f766e") {

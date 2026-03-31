@@ -58,6 +58,13 @@
   "reportSlug": "germany-klaviyo-sms-gap",
   "siteUrl": "https://www.enrichanything.com/markets/shopify-germany-klaviyo-no-sms",
   "reportUrl": "https://www.enrichanything.com/reports/germany-klaviyo-sms-gap",
+  "snapshotId": "2026-03-28-16faeac300",
+  "datasetUrl": "https://www.enrichanything.com/datasets/markets/shopify-germany-klaviyo-no-sms",
+  "datasetJsonUrl": "https://www.enrichanything.com/datasets/markets/shopify-germany-klaviyo-no-sms/payload.json",
+  "datasetCsvUrl": "https://www.enrichanything.com/datasets/markets/shopify-germany-klaviyo-no-sms/sample-rows.csv",
+  "snapshotUrl": "https://www.enrichanything.com/snapshots/markets/shopify-germany-klaviyo-no-sms/2026-03-28-16faeac300",
+  "snapshotJsonUrl": "https://www.enrichanything.com/snapshots/markets/shopify-germany-klaviyo-no-sms/2026-03-28-16faeac300/payload.json",
+  "snapshotCsvUrl": "https://www.enrichanything.com/snapshots/markets/shopify-germany-klaviyo-no-sms/2026-03-28-16faeac300/sample-rows.csv",
   "status": "live",
   "live": true,
   "dataSource": "collected_sample",
@@ -98,5 +105,11 @@
       "gap": "No visible SMS tooling detected",
       "whyNow": "The brand already appears to run lifecycle email, so the missing SMS layer is actionable now."
     }
-  ]
+  ],
+  "repoReadmePath": "markets/shopify-germany-klaviyo-no-sms/README.md",
+  "githubReadmeUrl": "https://github.com/bhumanai/enrichanything-shopify-channel-gaps/blob/main/markets/shopify-germany-klaviyo-no-sms/README.md",
+  "trackedDatasetUrl": "https://www.enrichanything.com/datasets/markets/shopify-germany-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-germany-klaviyo-no-sms-dataset",
+  "trackedSnapshotUrl": "https://www.enrichanything.com/snapshots/markets/shopify-germany-klaviyo-no-sms/2026-03-28-16faeac300?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-germany-klaviyo-no-sms-snapshot",
+  "trackedSiteUrl": "https://www.enrichanything.com/markets/shopify-germany-klaviyo-no-sms?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-germany-klaviyo-no-sms",
+  "trackedReportUrl": "https://www.enrichanything.com/reports/germany-klaviyo-sms-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-germany-klaviyo-no-sms-report"
 }
