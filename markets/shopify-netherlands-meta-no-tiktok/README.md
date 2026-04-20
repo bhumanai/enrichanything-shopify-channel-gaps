@@ -3,7 +3,7 @@
 A public list of Dutch Shopify brands that appear active on Meta but do not show a TikTok setup.
 
 - Dataset page: [Open the latest dataset](https://www.enrichanything.com/datasets/markets/shopify-netherlands-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-netherlands-meta-no-tiktok-dataset)
-- Immutable snapshot: [Open the stable permalink](https://www.enrichanything.com/snapshots/markets/shopify-netherlands-meta-no-tiktok/2026-04-13-5da4031be9?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-netherlands-meta-no-tiktok-snapshot)
+- Immutable snapshot: [Open the stable permalink](https://www.enrichanything.com/snapshots/markets/shopify-netherlands-meta-no-tiktok/2026-04-20-5da4031be9?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-netherlands-meta-no-tiktok-snapshot)
 - Open in EnrichAnything: [See the live list](https://www.enrichanything.com/markets/shopify-netherlands-meta-no-tiktok?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-netherlands-meta-no-tiktok)
 - Related note: [Read the matching note](https://www.enrichanything.com/reports/netherlands-meta-tiktok-gap?utm_source=github&utm_medium=public_repo&utm_campaign=enrichanything-shopify-channel-gaps&utm_content=market-shopify-netherlands-meta-no-tiktok-report)
 - Useful for: EU TikTok agencies and DTC growth freelancers
